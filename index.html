@@ -8,8 +8,8 @@
    <header>
     <!--<p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p> -->
      <nav>
-       <ul>
-            <li><a><img src="" width="154" height="64" alt=""></a></li> <!--логотип магазина-->
+        <a><img src="" width="154" height="64" alt=""></a> <!--логотип магазина-->
+         <ul>
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="blank.html">Доставка и оплата</a></li>
             <li><a href="blank.html">О компании</a></li>
@@ -26,14 +26,24 @@
    <main>
      <h1>Магазин мороженого Gllecy Shop</h1>
      <section>
-           <h2>Малинка даром!</h2>
-           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-           <button type="button">Хочу варенье!</button>
+       <img src="" width="372" height="584" alt="">
+       <img src="" width="333" height="519" alt="">
+       <p>Крем-брюле и пломбир с малиновым джемом</p>
+       <a href="blank.html">Давайте оба!</a>
+     </section>
+     <section>
+           <a href="blank.html">
+             <h2>Малинка даром!</h2>
+             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+             <a href="blank.html">Хочу варенье!</a>
+           </a>
       </section>
      <section>
-           <h2>Шоколадки даром!</h2>
-           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-           <button type="button">Хочу шоколадки!</button>
+           <a href="blank.html">
+             <h2>Шоколадки даром!</h2>
+             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+             <a href="blank.html">Хочу шоколадки!</a>
+           </a>
      </section>
      <section>
          <ul>
@@ -85,9 +95,12 @@
        </section>
      <section>
          <!--отправка подписки -->
-         <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-         <input type="email" placeholder="email@example.com">
-         <input type="submit" value="ОТПРАВИТЬ">
+         <form class="" action="https://echo.htmlacademy.ru" method="post">
+           <label for="mail"></label>
+           <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+           <input type="email" id="mail" placeholder="email@example.com">
+           <button type="submit" value="ОТПРАВИТЬ">
+         </form>
      </section>
      <section>
         <!--Контактная информация-->
@@ -102,7 +115,7 @@
         <p>Для заказов по телефону:</p>
         <p><a href="tel:+78005558628">+7 800 555-86-28</a></p>
         <p>(с 10 до 20 ежедневно)</p>
-        <button type="button">Форма обратной связи</button>
+        <a href="href.html">Форма обратной связи</a>
       </section>
     </main>
    <footer>
@@ -139,7 +152,7 @@
        </ul>
      </section>
      <section>
-       <p><a href="https://htmlacademy.ru/"><img src="" width="107.89" height="30.99" alt=""></a></p>
+       <p><a href="https://htmlacademy.ru/"><img src="" width="108" height="31" alt=""></a></p>
        <p>Сделано в HTML Academy © 2021</p>
      </section>
    </footer>
