@@ -8,7 +8,7 @@
    <header>
     <!--<p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p> -->
      <nav>
-       <a href="index.html"><img src="" width="154" height="64" alt=""></a> <!--логотип магазина-->
+       <a href="index.html"><img src="img/Logo.svg" width="154" height="64" alt=""></a> <!--логотип магазина-->
          <ul>
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="blank.html">Доставка и оплата</a></li>
@@ -32,18 +32,27 @@
   <h1>Сливочное мороженое</h1>
   <section>
     <h2>Фильтр товаров</h2>
-    <form class="" action="http://echo.htmlacademy.html" method="post">
+    <form class="" action="http://echo.htmlacademy.html" method="get">
       <fieldset>
         <legend>Сортировка</legend>
            <select name="theme">
-             <option selected value="по популярности">по популярности</option>
-             <option value="сначала недорогие">сначала недорогие</option>
-             <option value="eсначала дорогие">сначала дорогие</option>
-             <option value="по жирности">по жирности</option>
+             <option selected value="popularity">по популярности</option>
+             <option value="not-expensive">сначала недорогие</option>
+             <option value="expensive">сначала дорогие</option>
+             <option value="fat-content">по жирности</option>
            </select>
       </fieldset>
       <fieldset>
-        <legend>Цена: 100 ₽ – 500 ₽</legend>
+        <label>
+          Цена:
+          <input type="text" value="100">
+          ₽
+        </label>
+        <label>
+          -
+          <input type="text" value="500">
+          ₽
+        </label>
         <!--Пока не знаю как сделать сортировку??? -->
         <div class="range-controls"> <!--сортировка по цене нашел в интернете https://codepen.io/3gdata/pen/VYmEgb-->
                 <div class="scale"><div style="margin-left:50px;width:100px;" class="bar"></div></div>
@@ -55,19 +64,19 @@
         <legend>Жирность</legend>
         <ul>
           <li>
-            <input type="radio" name="0" value="0%" id="0">
+            <input type="radio" name="fat" value="0%" id="0">
             <label for="0">0%</label>
           </li>
           <li>
-            <input type="radio" name="10" value="10%" id="10" checked>
+            <input type="radio" name="fat" value="10%" id="10" checked>
             <label for="10">до 10%</label>
           </li>
           <li>
-            <input type="radio" name="30" value="30%" id="30">
+            <input type="radio" name="fat" value="30%" id="30">
             <label for="30">до 30%</label>
           </li>
           <li>
-            <input type="radio" name="above-30" value="above-30%" id="above-30">
+            <input type="radio" name="fat" value="above-30%" id="above-30">
             <label for="above-30">выше 30%</label>
           </li>
         </ul>
@@ -107,84 +116,84 @@
       <li>
         <a href="blank.html">
          <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-         <p><img src="" width="267" height="267" alt=""></p>
+         <p><img src="img/ice/ice1.png" width="267" height="267" alt="Мороженое"></p>
          <p>310 ₽<span>/кг</span></p>
         </a>
       </li>
       <li>
         <a href="blank.html">
          <h3>Сливочно-кофейное с кусочками шоколада</h3>
-         <p><img src="" width="267" height="267" alt=""></p>
+         <p><img src="img/ice/ice2.png" width="267" height="267" alt="Мороженое"></p>
          <p>380 ₽<span>/кг</span></p>
         </a>
       </li>
       <li>
         <a href="blank.html">
          <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-         <p><img src="" width="267" height="267" alt=""></p>
+         <p><img src="img/ice/ice3.png" width="267" height="267" alt="Мороженое"></p>
          <p>355 ₽<span>/кг</span></p>
         </a>
       </li>
       <li>
         <a href="blank.html">
          <h3>Сливочное крем-брюле с карамельной подливкой</h3>
-         <p><img src="" width="267" height="267" alt=""></p>
+         <p><img src="img/ice/ice4.png" width="267" height="267" alt="Мороженое"></p>
          <p>415 ₽<span>/кг</span></p>
         </a>
       </li>
       <li>
         <a href="blank.html">
          <h3>Сливочное с брусничным джемом</h3>
-         <p><img src="" width="267" height="267" alt=""></p>
+         <p><img src="img/ice/ice5.png" width="267" height="267" alt="Мороженое"></p>
          <p>325 ₽<span>/кг</span></p>
         </a>
       </li>
       <li>
         <a href="blank.html">
          <h3>Сливочно-черничное с цельными ягодами черники</h3>
-         <p><img src="" width="267" height="267" alt=""></p>
+         <p><img src="img/ice/ice6.png" width="267" height="267" alt="Мороженое"></p>
          <p>410 ₽<span>/кг</span></p>
         </a>
       </li>
       <li>
         <a href="blank.html">
          <h3>Сливочно-лимонное с карамельной присыпкой</h3>
-         <p><img src="" width="267" height="267" alt=""></p>
+         <p><img src="img/ice/ice7.png" width="267" height="267" alt="Мороженое"></p>
          <p>315 ₽<span>/кг</span></p>
         </a>
       </li>
       <li>
         <a href="blank.html">
          <h3>Сливочное с шоколадной стружкой</h3>
-         <p><img src="" width="267" height="267" alt=""></p>
+         <p><img src="img/ice/ice8.png" width="267" height="267" alt="Мороженое"></p>
          <p>350 ₽<span>/кг</span></p>
         </a>
       </li>
       <li>
         <a href="blank.html">
          <h3>Сливочно-ванильное с кусочками шоколада</h3>
-         <p><img src="" width="267" height="267" alt=""></p>
+         <p><img src="img/ice/ice9.png" width="267" height="267" alt="Мороженое"></p>
          <p>440 ₽<span>/кг</span></p>
         </a>
       </li>
       <li>
         <a href="blank.html">
          <h3>Сливочноe с ментоловым сиропом</h3>
-         <p><img src="" width="267" height="267" alt=""></p>
+         <p><img src="img/ice/ice10.png" width="267" height="267" alt="Мороженое"></p>
          <p>435 ₽<span>/кг</span></p>
         </a>
       </li>
       <li>
         <a href="blank.html">
          <h3>Сливочное с кусочками черного шоколада</h3>
-         <p><img src="" width="267" height="267" alt=""></p>
+         <p><img src="img/ice/ice11.png" width="267" height="267" alt="Мороженое"></p>
          <p>355 ₽<span>/кг</span></p>
         </a>
       </li>
       <li>
         <a href="blank.html">
          <h3>Сливочное с мятным сиропом</h3>
-         <p><img src="" width="267" height="267" alt=""></p>
+         <p><img src="img/ice/ice12.png" width="267" height="267" alt="Мороженое"></p>
          <p>420 ₽<span>/кг</span></p>
         </a>
       </li>
@@ -215,5 +224,43 @@
     </ul>
   </section>
 </main>
+<footer> <!--Подвал-->
+ <section>
+   <ul>
+     <li>
+       <a href="#">Фейсбук</a>
+     </li>
+     <li>
+       <a href="#">ВКонтакте</a>
+     </li>
+     <li>
+       <a href="#">Инстаграм</a>
+     </li>
+     <li>
+       <a href="#">Твитер</a>
+     </li>
+   </ul>
+ </section>
+ <section>
+   <ul>
+     <li>
+       <a href="blank.html">Для поставщиков</a>
+     </li>
+     <li>
+       <a href="blank.html">О производстве</a>
+     </li>
+     <li>
+       <a href="blank.html">Наши документы</a>
+     </li>
+     <li>
+       <a href="blank.html">Экологические стандарты</a>
+     </li>
+   </ul>
+ </section>
+ <section>
+   <p><a href="https://htmlacademy.ru/"><img src="" width="108" height="31" alt=""></a></p>
+   <p>Сделано в HTML Academy © 2021</p>
+ </section>
+</footer>
   </body>
 </html>
