@@ -1,0 +1,270 @@
+/*константы по цветам*/
+:root {
+  --basic-black-text: #323232;
+  --basic-green: #849D8F;
+  --basic-brawn: #9D8B84;
+  --basic-neutral: #8996A6;
+  --basic-white: #FFFFFF;
+  --basic-neutral: #5A5A5A
+/*
+  --basic-black: #000000;
+  --basic-extra-dark: #242424;
+  --basic-dark: #aba9a7;
+  --basic-neutral: #e5e5e5;
+  --basic-extra-light: #f8f5f2;
+
+  --special: #663d15;*/
+}
+/* Global */
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: var(--basic-white);
+  /*text-transform: uppercase;*/
+  background-color: var(--basic-green);
+  /*background-image: url("img/bg.jpg");*/
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/* Main navigation */
+.main-navigation {
+  font-size: 16px;
+  line-height: 18px;
+  /*color: var(--basic-white);*/
+  /*background-color: transparent;*/
+}
+
+/*меню главное*/
+.site-navigation {
+  list-style: none;
+  line-height: 18px;
+}
+.site-navigation a {
+text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+}
+/*цвет ссылки меню и ссылки входа*/
+.site-navigation a,
+.telephone a,
+.button,
+.button2,
+.hit-list a {
+  color: var(--basic-white);
+}
+
+/*кнопки поиска корзины и авторизации*/
+.login-link {
+  list-style: none;
+  /*text-decoration: none; /*убираем подчеркивание*/
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.login-link a{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: var(--basic-white);
+  text-decoration: none;
+}
+
+/*цвет меню при наведении*/
+.site-navigation a:hover,
+.login-link a:hover{
+  color: var(--basic-black-text);
+  background-color: var(--basic-white);
+  border-radius: 26px;
+  text-decoration: none;
+}
+
+.text1 {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.telephone {
+  font-size: 22px;
+  line-height: 24px;
+}
+.telephone a {
+  text-decoration: none;
+}
+
+
+.telephone a:hover{ /*при наведении на номер телефона появляется подчеркивание*/
+  text-decoration: underline;
+}
+
+.features {
+  text-align: center;
+}
+
+.text2 {
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.button {
+  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  font-size: 32px;
+  line-height: 44px;
+  border-radius: 70px;
+  text-decoration: none;
+}
+
+.button2 {
+  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  font-size: 18px;
+  line-height: 24px;
+  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  border-radius: 70px;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.raspberries {
+  background-image: url("img/backgraund-malina.jpg");
+}
+.text3 {
+  font-size: 18px;
+}
+/*хиты продаж*/
+.hit-list {
+  list-style: none;
+}
+.hit-list p{
+  font-size: 45px;
+  line-height: 45px;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+.hit-list a {
+  font-weight: 500;
+  text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  /*font-size: 16px;
+  line-height: 22px;*/
+}
+span {
+  font-size: 30px;
+  line-height: 35px;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+/*конец хитов продаж*/
+
+/*качество продукции*/
+.quality {
+  background-image: url("img/pattern.jpg");
+}
+.quality-list {
+  list-style: none;
+  color: var(--basic-black-text);
+}
+h3 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-black-text);
+}
+.quality-item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+/*конец качества продукции*/
+
+/*новости*/
+.news p {
+  font-weight: 500;
+  color: var(--basic-black-text);
+}
+.news a {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-black-text);
+}
+/*конец нововсти*/
+
+/*отправка сообщения*/
+.mail p {
+  font-weight: 400;
+  color: var(--basic-neutral);
+}
+.mail input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+}
+.mail button {
+  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 70px;
+  color: var(--basic-white);
+  text-decoration: none;
+}
+/*конец отправка сообщения*/
+
+/*обратная связь*/
+.contacts {
+  background: #FEFEFE;
+  color: var(--basic-black-text);
+}
+.contacts1 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.contacts2 {
+  font-size: 18px;
+  line-height: 24px;
+}
+.contacts2 a {
+  color: var(--basic-black-text);
+  text-decoration: none;
+}
+.contacts2 a:hover {
+  text-decoration: underline; /*при наведении на номер телефона появляется подчеркивание*/
+}
+/*конец обратная связь*/
+
+/*подвал*/
+.footer-social ul {
+  list-style: none; /*убираем обозначанеи списка*/
+}
+
+.fotter-contacts-list {
+  list-style: none; /*убираем обозначанеи списка*/
+  color: var(--basic-white);
+}
+.fotter-contacts-list a {
+  color: var(--basic-white);
+  text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+.fotter-suppliers a {
+  font-weight: 700;
+}
+.footer-copyright {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+.footer-copyright a {
+  color: var(--basic-white);
+  text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+}
+/*конец подвал*/
