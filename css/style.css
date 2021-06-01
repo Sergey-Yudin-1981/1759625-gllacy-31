@@ -18,11 +18,11 @@
 /* Global */
 
 body {
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+  /*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');*/ /*подключениме шрифта 2-ой вариант*/
   min-width: 960px;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", /*Arial,*/ sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
@@ -49,6 +49,10 @@ span {
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
+fieldset {
+  border: none;
+}
+
 /* Main navigation */
 .main-navigation {
   font-size: 16px;
@@ -71,10 +75,45 @@ span {
 .site-navigation a,
 .telephone a,
 .button,
+.button-apply,
 .hit-list a {
   color: var(--basic-white);
 }
+/*горизонтальное меню*/
+ul.login-link li {
+  display:inline-block; /* расположить пункты горизонтально */
+  margin-right: 9px; /* Отступ слева */
+  /*padding: 9px 23px;*/
+}
 
+/*горизонтальное меню*/
+ul.site-navigation li {
+  display:inline-block; /* расположить пункты горизонтально */
+  margin-right: 18px; /* Отступ слева */
+  /*padding: 9px 23px;*/
+}
+
+/*хлебные крошки*/
+.crumbs {
+  font-size: 14px;
+  line-height: 16px;
+  list-style: none;
+  font-weight: 400; /*жирность шрифта*/
+  /*color: var(--basic-white);*/
+}
+.crumbs a{
+  color: var(--basic-white);
+  text-decoration: none; /*убираем подчеркивание у ссылок*/
+  border-bottom:1px solid rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+}
+/*горизонтальное меню*/
+ul.crumbs li {
+  display:inline-block; /* расположить пункты горизонтально */
+  margin-right: 22px; /* Отступ слева */
+}
+/*конец хлебные крошки*/
+
+/*меню каталог с catalog.html*/
 .mark a {
   background: #D07058;
   padding: 9px 23px; /* Поля вокруг текста */
@@ -101,9 +140,20 @@ span {
 
 /*цвет меню при наведении*/
 .site-navigation a:hover,
+.button-apply:hover,
 .login-link a:hover {
   color: var(--basic-black-text);
   background-color: var(--basic-white);
+  padding: 9px 23px; /* Поля вокруг текста */
+  border-radius: 26px;
+  text-decoration: none;
+}
+
+/*цвет при нажатии*/
+.button-apply:focus {
+  color: var(--basic-black-text);
+  background-color: var(--basic-white);
+  box-shadow: 0px -3px 0px #696969;/*rgba(172, 16, 0, 0.64); /*тень кнопки*/
   padding: 9px 23px; /* Поля вокруг текста */
   border-radius: 26px;
   text-decoration: none;
@@ -150,16 +200,31 @@ span {
   font-size: 32px;
   line-height: 44px;
 }
-/*.button2 {
-  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%); /*градиентная заливка*/
-/*  font-size: 18px; /*font-size: 32px;*/
-/*  line-height: 24px; /*line-height: 44px;*/
-/*  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76); /*тень текста*/
-/*  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64); /*тень кнопки*/
-/*  padding: 9px 23px; /* Поля вокруг текста */
-/*  border-radius: 70px; /*скругление углов*/
-/*  text-decoration: none;
-}*/
+
+.sorting {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+.sorting-list {
+  color: var(--basic-white);
+  background: rgba(255, 255, 255, 0.2); /*заливка*/
+  border-radius: 20px; /*скругление углов*/
+  font-size: 16px;
+  line-height: 18px;
+  padding: 9px 23px; /* Поля вокруг текста */
+  text-decoration: none;
+}
+.button-apply { /*кнопка применить*/
+  background: rgba(255, 255, 255, 0.2); /*заливка*/
+  border: 2px solid #FFFFFF; /*окантовка*/
+  box-sizing: border-box;
+  border-radius: 20px; /*скругление углов*/
+  font-size: 16px;
+  line-height: 18px;
+  padding: 9px 23px; /* Поля вокруг текста */
+  text-decoration: none;
+}
 
 .raspberries {
   background-image: url("../img/backgraund-malina.jpg") no-repeat;

@@ -2,6 +2,8 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <!--<link rel="preconnect" href="https://fonts.gstatic.com">-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <title>Магазин мороженого "GllacyShop"</title>
   <link rel="icon" href="favicon.ico"> <!-- 32/32 -->
@@ -13,7 +15,9 @@
   <header class="main-header">
     <!--<p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p> -->
     <nav class="main-navigation">
-      <a href="index.html"><img src="img/logo.svg" width="154" height="64" alt=""></a> <!--логотип магазина-->
+      <a href="index.html"> <!--логотип магазина-->
+        <img src="img/logo.svg" width="154" height="64" alt="">
+      </a>
       <ul class="site-navigation">
         <li class="mark"><a href="catalog.html">Каталог</a></li>
         <li><a href="blank.html">Доставка и оплата</a></li>
@@ -24,7 +28,7 @@
         <li><a href="blank.html">Вход</a></li>
         <li><a href="blank.html">Корзина</a></li>
       </ul>
-      <ul>
+      <ul class="crumbs">
         <li><a href="index.html">Главная</a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li>Сливочное</li>
@@ -35,12 +39,12 @@
   </header>
   <main>
     <h1>Сливочное мороженое</h1>
-    <section>
+    <section class="filtr">
       <h2>Фильтр товаров</h2>
-      <form class="" action="http://echo.htmlacademy.html" method="get">
-        <fieldset>
+      <form action="http://echo.htmlacademy.html" method="get">
+        <fieldset class="sorting">
           <legend>Сортировка</legend>
-          <select name="theme">
+          <select class="sorting-list" name="theme">
             <option selected value="popularity">по популярности</option>
             <option value="not-expensive">сначала недорогие</option>
             <option value="expensive">сначала дорогие</option>
@@ -111,7 +115,7 @@
             </li>
           </ul>
         </fieldset>
-        <button type="submit">Применить</button>
+        <button class="button-apply" type="submit">Применить</button>
 
       </form>
     </section>
@@ -292,9 +296,9 @@
         </li>
       </ul>
     </section>
-    <section class="footer-copyright">
+    <section>
       <p><a href="https://htmlacademy.ru/"><img src="img/html-academy.svg" width="108" height="31" alt=""></a></p>
-      <p>Сделано <a href="https://htmlacademy.ru/">в HTML Academy</a> © 2021</p>
+      <p class="footer-copyright">Сделано <a href="https://htmlacademy.ru/">в HTML Academy</a> © 2021</p>
     </section>
   </footer>
 </body>
