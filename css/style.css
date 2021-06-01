@@ -18,10 +18,11 @@
 /* Global */
 
 body {
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
   min-width: 960px;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", /*Arial,*/ sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
@@ -62,15 +63,24 @@ span {
   line-height: 18px;
 }
 .site-navigation a {
-  text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  text-decoration: none; /*убираем подчеркивание у ссылок*/
+  border-bottom:1px solid rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  /*text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
 }
 /*цвет ссылки меню и ссылки входа*/
 .site-navigation a,
 .telephone a,
 .button,
-.button2,
 .hit-list a {
   color: var(--basic-white);
+}
+
+.mark a {
+  background: #D07058;
+  padding: 9px 23px; /* Поля вокруг текста */
+  border-radius: 26px;
+  /*color: var(--basic-white);*/
+  text-decoration: none;
 }
 
 /*кнопки поиска корзины и авторизации*/
@@ -91,7 +101,7 @@ span {
 
 /*цвет меню при наведении*/
 .site-navigation a:hover,
-.login-link a:hover{
+.login-link a:hover {
   color: var(--basic-black-text);
   background-color: var(--basic-white);
   padding: 9px 23px; /* Поля вокруг текста */
@@ -121,7 +131,7 @@ span {
   text-align: center;
 }
 
-.reklama-basis {
+.banner-basis {
   font-size: 60px;
   line-height: 60px;
 }
@@ -155,7 +165,8 @@ span {
   background-image: url("../img/backgraund-malina.jpg") no-repeat;
 
 }
-.reklama {
+
+.banner {
   font-size: 18px;
 }
 /*хиты продаж*/
@@ -169,7 +180,9 @@ span {
 }
 .hit-list a {
   font-weight: 500;
-  text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  text-decoration: none; /*убираем подчеркивание у ссылок*/
+  border-bottom:1px solid rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  /*text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
   /*font-size: 16px;
   line-height: 22px;*/
 }
@@ -255,19 +268,20 @@ span {
   list-style: none; /*убираем обозначанеи списка*/
 }
 
-.fotter-contacts-list {
+.footer-contacts-list {
   list-style: none; /*убираем обозначанеи списка*/
   color: var(--basic-white);
 }
-.fotter-contacts-list a {
+.footer-contacts-list a {
   color: var(--basic-white);
-  text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
-  font-family: Roboto;
+  text-decoration: none; /*убираем подчеркивание у ссылок*/
+  border-bottom:1px solid rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  /*font-family: Roboto;*/
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
 }
-.fotter-suppliers a {
+.footer-suppliers a {
   font-weight: 700;
 }
 .footer-copyright {
@@ -277,6 +291,7 @@ span {
 }
 .footer-copyright a {
   color: var(--basic-white);
-  text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  text-decoration: none; /*убираем подчеркивание у ссылок*/
+  border-bottom:1px solid rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
 }
 /*конец подвал*/
