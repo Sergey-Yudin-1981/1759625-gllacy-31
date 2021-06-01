@@ -6,7 +6,7 @@
   --basic-neutral: #8996A6;
   --basic-white: #FFFFFF;
   --basic-neutral: #5A5A5A
-/*
+  /*
   --basic-black: #000000;
   --basic-extra-dark: #242424;
   --basic-dark: #aba9a7;
@@ -32,6 +32,21 @@ body {
   background-position: top center;
   background-repeat: no-repeat;
 }
+h2 {
+  font-size: 35px;
+  line-height: 41px;
+}
+h3 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-black-text);
+}
+span {
+  font-size: 30px;
+  line-height: 35px;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
 
 /* Main navigation */
 .main-navigation {
@@ -47,7 +62,7 @@ body {
   line-height: 18px;
 }
 .site-navigation a {
-text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
 }
 /*цвет ссылки меню и ссылки входа*/
 .site-navigation a,
@@ -67,7 +82,8 @@ text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркива
 }
 
 .login-link a{
-  background: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 9px 23px; /* Поля вокруг текста */
   border-radius: 20px;
   color: var(--basic-white);
   text-decoration: none;
@@ -78,11 +94,12 @@ text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркива
 .login-link a:hover{
   color: var(--basic-black-text);
   background-color: var(--basic-white);
+  padding: 9px 23px; /* Поля вокруг текста */
   border-radius: 26px;
   text-decoration: none;
 }
 
-.text1 {
+.work {
   font-size: 14px;
   line-height: 16px;
 }
@@ -104,37 +121,41 @@ text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркива
   text-align: center;
 }
 
-.text2 {
+.reklama-basis {
   font-size: 60px;
   line-height: 60px;
 }
 
-.button {
-  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  font-size: 32px;
-  line-height: 44px;
-  border-radius: 70px;
-  text-decoration: none;
-}
-
-.button2 {
-  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+.button /*.button*/ {
+  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%); /*градиентная заливка*/
   font-size: 18px;
   line-height: 24px;
-  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
-  border-radius: 70px;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76); /*тень текста*/
+  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64); /*тень кнопки*/
+  padding: 9px 23px; /* Поля вокруг текста */
+  border-radius: 70px; /*скругление углов*/
   text-decoration: none;
 }
-
-h2 {
-  font-size: 35px;
-  line-height: 41px;
+.button-slide {
+  font-size: 32px;
+  line-height: 44px;
 }
+/*.button2 {
+  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%); /*градиентная заливка*/
+/*  font-size: 18px; /*font-size: 32px;*/
+/*  line-height: 24px; /*line-height: 44px;*/
+/*  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76); /*тень текста*/
+/*  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64); /*тень кнопки*/
+/*  padding: 9px 23px; /* Поля вокруг текста */
+/*  border-radius: 70px; /*скругление углов*/
+/*  text-decoration: none;
+}*/
 
 .raspberries {
-  background-image: url("img/backgraund-malina.jpg");
+  background-image: url("../img/backgraund-malina.jpg") no-repeat;
+
 }
-.text3 {
+.reklama {
   font-size: 18px;
 }
 /*хиты продаж*/
@@ -152,27 +173,18 @@ h2 {
   /*font-size: 16px;
   line-height: 22px;*/
 }
-span {
-  font-size: 30px;
-  line-height: 35px;
-  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
-}
+
 /*конец хитов продаж*/
 
 /*качество продукции*/
 .quality {
-  background-image: url("img/pattern.jpg");
+  background-image: url("../img/pattern.jpg");
 }
 .quality-list {
   list-style: none;
   color: var(--basic-black-text);
 }
-h3 {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 30px;
-  color: var(--basic-black-text);
-}
+
 .quality-item {
   font-weight: 400;
   font-size: 16px;
@@ -217,23 +229,23 @@ h3 {
 
 /*обратная связь*/
 .contacts {
-  background: #FEFEFE;
+  background-color: #FEFEFE;
   color: var(--basic-black-text);
 }
-.contacts1 {
+.contacts-text {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
 }
-.contacts2 {
+.contacts-text-bold {
   font-size: 18px;
   line-height: 24px;
 }
-.contacts2 a {
+.contacts-text-bold a {
   color: var(--basic-black-text);
   text-decoration: none;
 }
-.contacts2 a:hover {
+.contacts-text-bold a:hover {
   text-decoration: underline; /*при наведении на номер телефона появляется подчеркивание*/
 }
 /*конец обратная связь*/
