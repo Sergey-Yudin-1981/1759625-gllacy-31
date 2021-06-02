@@ -53,6 +53,27 @@ fieldset {
   border: none;
 }
 
+/*горизонтальное меню*/
+ul.login-link li {
+  display:inline-block; /* расположить пункты горизонтально */
+  margin-right: 9px; /* Отступ слева */
+  /*padding: 9px 23px;*/
+}
+
+/*горизонтальное меню*/
+ul.site-navigation li {
+  display:inline-block; /* расположить пункты горизонтально */
+  margin-right: 18px; /* Отступ слева */
+  /*padding: 9px 23px;*/
+}
+
+/*горизонтальное меню*/
+ul.crumbs li {
+  display:inline-block; /* расположить пункты горизонтально */
+  margin-right: 22px; /* Отступ слева */
+}
+/*конец хлебные крошки*/
+
 /* Main navigation */
 .main-navigation {
   font-size: 16px;
@@ -63,7 +84,7 @@ fieldset {
 
 /*меню главное*/
 .site-navigation {
-  list-style: none;
+  list-style: none; /*убираем маркер списка*/
   line-height: 18px;
 }
 .site-navigation a {
@@ -79,19 +100,6 @@ fieldset {
 .hit-list a {
   color: var(--basic-white);
 }
-/*горизонтальное меню*/
-ul.login-link li {
-  display:inline-block; /* расположить пункты горизонтально */
-  margin-right: 9px; /* Отступ слева */
-  /*padding: 9px 23px;*/
-}
-
-/*горизонтальное меню*/
-ul.site-navigation li {
-  display:inline-block; /* расположить пункты горизонтально */
-  margin-right: 18px; /* Отступ слева */
-  /*padding: 9px 23px;*/
-}
 
 /*хлебные крошки*/
 .crumbs {
@@ -106,12 +114,6 @@ ul.site-navigation li {
   text-decoration: none; /*убираем подчеркивание у ссылок*/
   border-bottom:1px solid rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
 }
-/*горизонтальное меню*/
-ul.crumbs li {
-  display:inline-block; /* расположить пункты горизонтально */
-  margin-right: 22px; /* Отступ слева */
-}
-/*конец хлебные крошки*/
 
 /*меню каталог с catalog.html*/
 .mark a {
@@ -304,6 +306,58 @@ ul.crumbs li {
   text-decoration: none;
 }
 /*конец отправка сообщения*/
+
+/*Уровень цены*/
+.range-controls{
+    position:relative;
+    /*position: absolute;*/
+    width: 218px;
+    height: 36px;
+    margin-bottom:15px;
+    /*padding:0 30px;*/
+    background: rgba(255, 255, 255, 0.2); /*цвет фона*/
+    border-radius:20px;
+    overflow:hidden;
+}
+.scale{ /*общая шкала*/
+    margin-top:18px; /*расстояние от верха*/
+    height:2px;
+    background:rgba(248, 247, 244, 0.5); /*цвет общей шкалы*/
+    /*border: 2px solid rgba(248, 247, 244, 0.5);*/
+}
+.bar{ /*шкала между бегунками*/
+    height:2px;
+    background:#F8F7F4; /*#00ca74;*/
+}
+.toggle{
+    position:absolute;
+    top:9px;
+    left:30px;
+    width:4px;
+    height:4px;
+    border:8px solid white;
+    background:#ababab;
+    cursor:pointer;
+    border-radius:50%;
+}
+.min-toggle{ /*положение курсора левого*/
+    left:30px;
+}
+.max-toggle{ /*положение курсора правого*/
+    left:145px;
+}
+/*конец уровень цены*/
+
+.content ul {
+  list-style: none; /*убираем обозначанеи списка*/
+}
+
+.filler ul {
+  list-style: none; /*убираем обозначанеи списка*/
+}
+.number-list {
+  list-style: none; /*убираем обозначанеи списка*/
+}
 
 /*обратная связь*/
 .contacts {
