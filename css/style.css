@@ -5,7 +5,11 @@
   --basic-brawn: #9D8B84;
   --basic-neutral: #8996A6;
   --basic-white: #FFFFFF;
-  --basic-neutral: #5A5A5A
+  --basic-neutral: #5A5A5A;
+  --basic-dark: #696969; /*темно-серый*/
+  --basic-darl-lite: #ababab; /*светло-серый*/
+  --basic-green-lite: rgba(255, 255, 255, 0.2); /*светло-зеленый в основном цвет фона кнопок*/
+  --brown-lite: #D07058; /*светло-коричневый*/
   /*
   --basic-black: #000000;
   --basic-extra-dark: #242424;
@@ -54,24 +58,24 @@ fieldset {
 }
 
 /*горизонтальное меню*/
-ul.login-link li {
-  display:inline-block; /* расположить пункты горизонтально */
-  margin-right: 9px; /* Отступ слева */
+/*.login-link li {
+  /*display:inline-block; /* расположить пункты горизонтально */
+/*  margin-right: 9px; /* Отступ слева */
   /*padding: 9px 23px;*/
-}
+/*}
 
 /*горизонтальное меню*/
-ul.site-navigation li {
+/*.site-navigation li {
   display:inline-block; /* расположить пункты горизонтально */
-  margin-right: 18px; /* Отступ слева */
+  /*margin-right: 18px; /* Отступ слева */
   /*padding: 9px 23px;*/
-}
+/*}
 
 /*горизонтальное меню*/
-ul.crumbs li {
+/*.crumbs li {
   display:inline-block; /* расположить пункты горизонтально */
-  margin-right: 22px; /* Отступ слева */
-}
+  /*margin-right: 22px; /* Отступ слева */
+/*}
 /*конец хлебные крошки*/
 
 /* Main navigation */
@@ -89,7 +93,7 @@ ul.crumbs li {
 }
 .site-navigation a {
   text-decoration: none; /*убираем подчеркивание у ссылок*/
-  border-bottom:1px solid rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  border-bottom:1px solid var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
   /*text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
 }
 /*цвет ссылки меню и ссылки входа*/
@@ -112,12 +116,13 @@ ul.crumbs li {
 .crumbs a{
   color: var(--basic-white);
   text-decoration: none; /*убираем подчеркивание у ссылок*/
-  border-bottom:1px solid rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  border-bottom:1px solid var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
 }
+/*конец хлебные крошки*/
 
 /*меню каталог с catalog.html*/
 .mark a {
-  background: #D07058;
+  background: var(--brown-lite);/* #D07058;*/
   padding: 9px 23px; /* Поля вокруг текста */
   border-radius: 26px;
   /*color: var(--basic-white);*/
@@ -133,7 +138,7 @@ ul.crumbs li {
 }
 
 .login-link a{
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--basic-green-lite); /*rgba(255, 255, 255, 0.2);*/
   padding: 9px 23px; /* Поля вокруг текста */
   border-radius: 20px;
   color: var(--basic-white);
@@ -155,7 +160,7 @@ ul.crumbs li {
 .button-apply:focus {
   color: var(--basic-black-text);
   background-color: var(--basic-white);
-  box-shadow: 0px -3px 0px #696969;/*rgba(172, 16, 0, 0.64); /*тень кнопки*/
+  box-shadow: 0px -3px 0px var(--basic-dark);/*rgba(172, 16, 0, 0.64); /*тень кнопки*/
   padding: 9px 23px; /* Поля вокруг текста */
   border-radius: 26px;
   text-decoration: none;
@@ -204,22 +209,45 @@ ul.crumbs li {
 }
 
 .sorting {
+  /*position: absolute;
+  width: 196px;
+  height: 56px;
+  left: 27px;
+  top: 187px;*/
+
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
 }
 .sorting-list {
   color: var(--basic-white);
-  background: rgba(255, 255, 255, 0.2); /*заливка*/
+  background: var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*заливка*/
   border-radius: 20px; /*скругление углов*/
   font-size: 16px;
   line-height: 18px;
   padding: 9px 23px; /* Поля вокруг текста */
   text-decoration: none;
 }
+
+/*.price {
+  position: absolute;
+  width: 218px;
+  height: 56px;
+  left: 238px;
+  top: 187px;
+}
+
+.content {
+  position: absolute;
+  width: 425px;
+  height: 56px;
+  left: 471px;
+  top: 187px;
+}*/
+
 .button-apply { /*кнопка применить*/
-  background: rgba(255, 255, 255, 0.2); /*заливка*/
-  border: 2px solid #FFFFFF; /*окантовка*/
+  background: var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*заливка*/
+  border: 2px solid var(--basic-white); /*#FFFFFF; /*окантовка*/
   box-sizing: border-box;
   border-radius: 20px; /*скругление углов*/
   font-size: 16px;
@@ -248,7 +276,7 @@ ul.crumbs li {
 .hit-list a {
   font-weight: 500;
   text-decoration: none; /*убираем подчеркивание у ссылок*/
-  border-bottom:1px solid rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  border-bottom:1px solid var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
   /*text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
   /*font-size: 16px;
   line-height: 22px;*/
@@ -312,22 +340,28 @@ ul.crumbs li {
     position:relative;
     /*position: absolute;*/
     width: 218px;
-    height: 36px;
-    margin-bottom:15px;
+    /*height: 36px;*/
+    /*overflow:hidden;*/ /*обрезание что выходит за границы*/
+    padding-top: 17px;
+    padding-bottom: 17px;
+    /*margin-bottom:15px;*/
     /*padding:0 30px;*/
-    background: rgba(255, 255, 255, 0.2); /*цвет фона*/
+    background: var(--basic-green-lite);/*rgba(255, 255, 255, 0.2); /*цвет фона*/
     border-radius:20px;
-    overflow:hidden;
+
 }
 .scale{ /*общая шкала*/
-    margin-top:18px; /*расстояние от верха*/
+    /*margin-top:18px; /*расстояние от верха*/
+    display: flex;
+    align-items: center;
+
     height:2px;
     background:rgba(248, 247, 244, 0.5); /*цвет общей шкалы*/
     /*border: 2px solid rgba(248, 247, 244, 0.5);*/
 }
 .bar{ /*шкала между бегунками*/
     height:2px;
-    background:#F8F7F4; /*#00ca74;*/
+    background: var(--basic-white); /*#F8F7F4; /*#00ca74;*/
 }
 .toggle{
     position:absolute;
@@ -336,7 +370,7 @@ ul.crumbs li {
     width:4px;
     height:4px;
     border:8px solid white;
-    background:#ababab;
+    background: var(--basic-darl-lite);
     cursor:pointer;
     border-radius:50%;
 }
@@ -394,7 +428,7 @@ ul.crumbs li {
 .footer-contacts-list a {
   color: var(--basic-white);
   text-decoration: none; /*убираем подчеркивание у ссылок*/
-  border-bottom:1px solid rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  border-bottom:1px solid var(--basic-green-lite);/*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
   /*font-family: Roboto;*/
   font-weight: 400;
   font-size: 13px;
@@ -411,6 +445,6 @@ ul.crumbs li {
 .footer-copyright a {
   color: var(--basic-white);
   text-decoration: none; /*убираем подчеркивание у ссылок*/
-  border-bottom:1px solid rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  border-bottom:1px solid var(--basic-green-lite);/*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
 }
 /*конец подвал*/
