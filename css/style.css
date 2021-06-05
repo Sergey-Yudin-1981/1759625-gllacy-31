@@ -36,6 +36,11 @@ body {
   /*background-image: url("img/bg.jpg");*/
   background-position: top center;
   background-repeat: no-repeat;
+
+  min-height: 100%; /*займи все пространство*/
+  display: grid; /*включение контекста grid*/
+  grid-template-rows: min-content 1fr min-content; /*правила расположения строк*/
+  align-content: start; /*начинайся сначала*/
 }
 h2 {
   font-size: 35px;
@@ -78,12 +83,51 @@ fieldset {
 /*}
 /*конец хлебные крошки*/
 
+/*grid*/
+.page {
+  height: 100%;
+}
+
 /* Main navigation */
 .main-navigation {
+  display: grid; /*включаем гриды*/
+  grid-template-columns: 2fr 1fr;
+  padding: 0 27px;
   font-size: 16px;
   line-height: 18px;
   /*color: var(--basic-white);*/
   /*background-color: transparent;*/
+  outline: 5px solid red;
+  outline-offset: -5px;
+  padding: 0px 27px;
+
+}
+
+.main-navigation-wrapper {
+  /*display: grid; /*включаем гриды*/
+
+  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;
+}
+
+.user-navigation {
+  justify-self: end;
+  outline: 5px solid yellow;
+  outline-offset: -5px;
+}
+
+.information {
+  display: grid; /*включаем гриды*/
+  justify-self: end;
+  outline: 5px solid blue;
+  outline-offset: -5px;
+}
+
+.raspberries-chocolate {
+  display: grid; /*включаем гриды*/
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 40px;
+  padding: 0px 27px;
 }
 
 /*меню главное*/
@@ -265,8 +309,14 @@ fieldset {
   font-size: 18px;
 }
 /*хиты продаж*/
+.hit {
+  padding: 0px 27px;
+}
 .hit-list {
   list-style: none;
+  display: grid; /*включаем гриды*/
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 40px;
 }
 .hit-list p{
   font-size: 45px;
@@ -287,6 +337,8 @@ fieldset {
 /*качество продукции*/
 .quality {
   background-image: url("../img/pattern.jpg");
+  margin-bottom: 40px;
+  padding: 0px 27px;
 }
 .quality-list {
   list-style: none;
@@ -301,6 +353,12 @@ fieldset {
 /*конец качества продукции*/
 
 /*новости*/
+.news-mail {
+  display: grid; /*включаем гриды*/
+  grid-template-columns: 1fr 1fr;
+  padding: 0px 27px;
+  margin-bottom: 40px;
+}
 .news p {
   font-weight: 500;
   color: var(--basic-black-text);
@@ -417,10 +475,20 @@ fieldset {
 /*конец обратная связь*/
 
 /*подвал*/
+.main-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0px 27px;
+}
 .footer-social ul {
   list-style: none; /*убираем обозначанеи списка*/
 }
-
+.footer-contacts {
+  text-align: center;
+}
+.footer-ico {
+  text-align: left;
+}
 .footer-contacts-list {
   list-style: none; /*убираем обозначанеи списка*/
   color: var(--basic-white);
