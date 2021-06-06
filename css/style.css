@@ -23,7 +23,7 @@
 
 body {
   /*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');*/ /*подключениме шрифта 2-ой вариант*/
-  min-width: 960px;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
@@ -62,6 +62,14 @@ fieldset {
   border: none;
 }
 
+/*Контентная область центрируется и не может быть уже макетной ширины, поэтому 1146px*/
+.container {
+  width: 1146px;
+  padding-left: 27px;
+  padding-right: 27px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /*горизонтальное меню*/
 /*.login-link li {
   /*display:inline-block; /* расположить пункты горизонтально */
@@ -92,14 +100,13 @@ fieldset {
 .main-navigation {
   display: grid; /*включаем гриды*/
   grid-template-columns: 2fr 1fr;
-  padding: 0 27px;
+  /*padding: 0 27px;*/
   font-size: 16px;
   line-height: 18px;
   /*color: var(--basic-white);*/
   /*background-color: transparent;*/
   outline: 5px solid red;
   outline-offset: -5px;
-  padding: 0px 27px;
 
 }
 
@@ -127,7 +134,7 @@ fieldset {
   display: grid; /*включаем гриды*/
   grid-template-columns: 1fr 1fr;
   margin-bottom: 40px;
-  padding: 0px 27px;
+  /*padding: 0px 27px;*/
 }
 
 /*меню главное*/
@@ -301,18 +308,23 @@ fieldset {
 }
 
 .raspberries {
-  background-image: url("../img/backgraund-malina.jpg") no-repeat;
+  background-image: url("../img/backgraund-malina.jpg"); /* no-repeat; из-за этого не выходила картинка фоном*/
+}
 
+.chocolate {
+  background-image: url("../img/backgraund-chocolate.jpg");
 }
 
 .banner {
   font-size: 18px;
 }
 /*хиты продаж*/
-.hit {
+/*.hit {
   padding: 0px 27px;
-}
+}*/
 .hit-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
   display: grid; /*включаем гриды*/
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -338,9 +350,11 @@ fieldset {
 .quality {
   background-image: url("../img/pattern.jpg");
   margin-bottom: 40px;
-  padding: 0px 27px;
+  /*padding: 0px 27px;*/
 }
 .quality-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
   color: var(--basic-black-text);
 }
@@ -356,7 +370,7 @@ fieldset {
 .news-mail {
   display: grid; /*включаем гриды*/
   grid-template-columns: 1fr 1fr;
-  padding: 0px 27px;
+  /*padding: 0px 27px;*/
   margin-bottom: 40px;
 }
 .news p {
@@ -453,6 +467,9 @@ fieldset {
 
 /*обратная связь*/
 .contacts {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #FEFEFE;
   color: var(--basic-black-text);
 }
@@ -478,15 +495,19 @@ fieldset {
 .main-footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 0px 27px;
+  /*padding: 0px 27px;*/
 }
 .footer-social ul {
+  margin: 0;
+  padding: 0;
   list-style: none; /*убираем обозначанеи списка*/
 }
 .footer-contacts {
   text-align: center;
 }
 .footer-ico {
+  margin: 0;
+  padding: 0;
   text-align: left;
 }
 .footer-contacts-list {
