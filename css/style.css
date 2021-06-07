@@ -133,8 +133,8 @@ fieldset {
 .raspberries-chocolate {
   display: grid; /*включаем гриды*/
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 40px;
-  /*padding: 0px 27px;*/
+  margin-bottom: 40px; /*отступ до следующего блока*/
+  height: 229px;
 }
 
 /*меню главное*/
@@ -253,6 +253,7 @@ fieldset {
   padding: 9px 23px; /* Поля вокруг текста */
   border-radius: 70px; /*скругление углов*/
   text-decoration: none;
+  display: inline-block;
 }
 .button-slide {
   font-size: 32px;
@@ -308,10 +309,14 @@ fieldset {
 }
 
 .raspberries {
+  width: 560px;
+  border-radius: 16px;
   background-image: url("../img/backgraund-malina.jpg"); /* no-repeat; из-за этого не выходила картинка фоном*/
 }
 
 .chocolate {
+  width: 560px;
+  border-radius: 16px;
   background-image: url("../img/backgraund-chocolate.jpg");
 }
 
@@ -319,9 +324,7 @@ fieldset {
   font-size: 18px;
 }
 /*хиты продаж*/
-/*.hit {
-  padding: 0px 27px;
-}*/
+
 .hit-list {
   margin: 0;
   padding: 0;
@@ -340,8 +343,7 @@ fieldset {
   text-decoration: none; /*убираем подчеркивание у ссылок*/
   border-bottom:1px solid var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
   /*text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
-  /*font-size: 16px;
-  line-height: 22px;*/
+
 }
 
 /*конец хитов продаж*/
