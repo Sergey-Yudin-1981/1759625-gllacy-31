@@ -70,6 +70,11 @@ fieldset {
   margin-left: auto;
   margin-right: auto;
 }
+
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+}
 /*горизонтальное меню*/
 /*.login-link li {
   /*display:inline-block; /* расположить пункты горизонтально */
@@ -98,8 +103,12 @@ fieldset {
 
 /* Main navigation */
 .main-navigation {
-  display: grid; /*включаем гриды*/
-  grid-template-columns: 2fr 1fr;
+  /*display: grid; /*включаем гриды*/
+  /*grid-template-columns: 2fr 1fr;*/
+  /*Делаем на флексах*/
+                /*display: flex;
+                align-items: center; /*выравнивание по вертикали в строке флекса*/
+                /*justify-content: space-between;*/
   /*padding: 0 27px;*/
   font-size: 16px;
   line-height: 18px;
@@ -112,20 +121,30 @@ fieldset {
 
 .main-navigation-wrapper {
   /*display: grid; /*включаем гриды*/
+  display: flex;
+  align-items: center;
+  width: 600px;
 
   outline: 5px solid rgba(0, 255, 255, 0.3);
   outline-offset: -5px;
 }
 
 .user-navigation {
-  justify-self: end;
+  width: 285px;
   outline: 5px solid yellow;
   outline-offset: -5px;
 }
 
-.information {
-  display: grid; /*включаем гриды*/
-  justify-self: end;
+
+.information p {
+  /*display: grid; /*включаем гриды*/
+  /*justify-self: end;*/
+  /*Делаем на флексах*/
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: flex-end;
   outline: 5px solid blue;
   outline-offset: -5px;
 }
@@ -139,8 +158,17 @@ fieldset {
 
 /*меню главное*/
 .site-navigation {
+  margin: 0;
+  padding: 0;
   list-style: none; /*убираем маркер списка*/
   line-height: 18px;
+  margin-left: 24px; /*отступ слева от логтипа*/
+}
+.main-header-logo { /*не совсем понял нужно или нет это прописывать в css*/
+  margin: 0;
+  padding: 0;
+  width: 154;
+  height: 64;
 }
 .site-navigation a {
   text-decoration: none; /*убираем подчеркивание у ссылок*/
@@ -281,6 +309,12 @@ fieldset {
   text-decoration: none;
 }
 
+.sorting-list option {
+  text-decoration: none;
+  color: var(--basic-black-tex);
+  background: #1E90FF; /*синий цвет*/
+}
+
 /*.price {
   position: absolute;
   width: 218px;
@@ -339,11 +373,10 @@ fieldset {
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 .hit-list a {
-  font-weight: 500;
+  font-weight: 500; /*полужирный текст - параметр*/
+  /*text-align: center; /*выравнивание текста по центру*/
   text-decoration: none; /*убираем подчеркивание у ссылок*/
   border-bottom:1px solid var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
-  /*text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
-
 }
 
 /*конец хитов продаж*/
@@ -495,9 +528,12 @@ fieldset {
 
 /*подвал*/
 .main-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  /*padding: 0px 27px;*/
+  /*display: grid;
+  grid-template-columns: 1fr 1fr 1fr;*/
+  /*делаем на флексах*/
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 .footer-social ul {
   margin: 0;
