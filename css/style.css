@@ -43,8 +43,11 @@ body {
   align-content: start; /*начинайся сначала*/
 }
 h2 {
+  padding: 0;
+  margin: 0;
   font-size: 35px;
   line-height: 41px;
+  padding: 16px 16px;
 }
 h3 {
   font-weight: 500;
@@ -121,30 +124,33 @@ fieldset {
 
 .main-navigation-wrapper {
   /*display: grid; /*включаем гриды*/
+  margin: 0;
   display: flex;
   align-items: center;
-  width: 600px;
+  width: 850px;
 
   outline: 5px solid rgba(0, 255, 255, 0.3);
   outline-offset: -5px;
 }
 
 .user-navigation {
+  margin: 0;
   width: 285px;
   outline: 5px solid yellow;
   outline-offset: -5px;
 }
 
 
-.information p {
+.information {
   /*display: grid; /*включаем гриды*/
   /*justify-self: end;*/
   /*Делаем на флексах*/
   margin: 0;
   padding: 0;
-  margin-bottom: 8px;
-  display: flex;
-  justify-content: flex-end;
+  /*margin-bottom: 8px;*/
+  /*display: flex;
+  justify-content: flex-end;*/
+  text-align: right;
   outline: 5px solid blue;
   outline-offset: -5px;
 }
@@ -160,6 +166,7 @@ fieldset {
 .site-navigation {
   margin: 0;
   padding: 0;
+  width: 450px;
   list-style: none; /*убираем маркер списка*/
   line-height: 18px;
   margin-left: 24px; /*отступ слева от логтипа*/
@@ -167,8 +174,8 @@ fieldset {
 .main-header-logo { /*не совсем понял нужно или нет это прописывать в css*/
   margin: 0;
   padding: 0;
-  width: 154;
-  height: 64;
+  width: 154px;
+  height: 64px;
 }
 .site-navigation a {
   text-decoration: none; /*убираем подчеркивание у ссылок*/
@@ -202,7 +209,8 @@ fieldset {
 /*меню каталог с catalog.html*/
 .mark a {
   background: var(--brown-lite);/* #D07058;*/
-  padding: 9px 23px; /* Поля вокруг текста */
+  padding: 9px 13px; /* Поля вокруг текста */
+  margin: -13px;
   border-radius: 26px;
   /*color: var(--basic-white);*/
   text-decoration: none;
@@ -218,20 +226,41 @@ fieldset {
 
 .login-link a{
   background-color: var(--basic-green-lite); /*rgba(255, 255, 255, 0.2);*/
-  padding: 9px 23px; /* Поля вокруг текста */
+  padding: 9px 13px; /* Поля вокруг текста */
   border-radius: 20px;
   color: var(--basic-white);
   text-decoration: none;
 }
 
 /*цвет меню при наведении*/
-.site-navigation a:hover,
-.button-apply:hover,
-.login-link a:hover {
+.site-navigation a:hover {
+  margin: 0;
   color: var(--basic-black-text);
   background-color: var(--basic-white);
-  padding: 9px 23px; /* Поля вокруг текста */
+  padding: 9px 13px; /* Поля вокруг текста */
+  margin: -13px;
   border-radius: 26px;
+  text-decoration: none;
+}
+.login-link a:hover {
+  margin: 0;
+  /*stroke: red;*/
+  color: var(--basic-black-text);
+  background-color: var(--basic-white);
+  padding: 9px 13px; /* Поля вокруг текста */
+  border-radius: 20px;
+  text-decoration: none;
+}
+svg:hover path {
+    fill: red;
+}
+
+.button-apply:hover{
+  margin: 0;
+  color: var(--basic-black-text);
+  background-color: var(--basic-white);
+  padding: 9px 29px; /* Поля вокруг текста */
+  border-radius: 20px;
   text-decoration: none;
 }
 
@@ -240,8 +269,8 @@ fieldset {
   color: var(--basic-black-text);
   background-color: var(--basic-white);
   box-shadow: 0px -3px 0px var(--basic-dark);/*rgba(172, 16, 0, 0.64); /*тень кнопки*/
-  padding: 9px 23px; /* Поля вокруг текста */
-  border-radius: 26px;
+  padding: 9px 29px; /* Поля вокруг текста */
+  border-radius: 20px;
   text-decoration: none;
 }
 
@@ -287,7 +316,16 @@ fieldset {
   font-size: 32px;
   line-height: 44px;
 }
-
+.button:hover { /*цвет кнопки при наведении*/
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: 0px 2px 2px #AC1000; /*тень кнопки*/
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76); /*тень текста*/
+}
+.button:focus { /*цвет кнопки при нажатии*/
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: inset 0px 2px 2px #942718;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76); /*тень текста*/
+}
 .sorting {
   /*position: absolute;
   width: 196px;
@@ -338,7 +376,7 @@ fieldset {
   border-radius: 20px; /*скругление углов*/
   font-size: 16px;
   line-height: 18px;
-  padding: 9px 23px; /* Поля вокруг текста */
+  padding: 9px 29px; /* Поля вокруг текста */
   text-decoration: none;
 }
 
@@ -355,6 +393,9 @@ fieldset {
 }
 
 .banner {
+  padding: 0;
+  margin: 0;
+  padding: 0px 16px;
   font-size: 18px;
 }
 /*хиты продаж*/
@@ -367,7 +408,7 @@ fieldset {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-bottom: 40px;
 }
-.hit-list p{
+.hit-list p {
   font-size: 45px;
   line-height: 45px;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
@@ -538,14 +579,17 @@ fieldset {
 .footer-social ul {
   margin: 0;
   padding: 0;
+  width: 164px;
   list-style: none; /*убираем обозначанеи списка*/
 }
 .footer-contacts {
+  width: 327px;
   text-align: center;
 }
 .footer-ico {
   margin: 0;
   padding: 0;
+  width: 190px;
   text-align: left;
 }
 .footer-contacts-list {
