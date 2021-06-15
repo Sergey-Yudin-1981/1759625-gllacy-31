@@ -166,10 +166,16 @@ fieldset {
 .site-navigation {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
   width: 450px;
   list-style: none; /*убираем маркер списка*/
   line-height: 18px;
   margin-left: 24px; /*отступ слева от логтипа*/
+}
+.site-navigation li {
+  position: relative; /*указывает какой тип позиционирования используется для элемента (статический, относительный, абсолютный или фиксированный)*/
+  margin-right: 32px;
 }
 .main-header-logo { /*не совсем понял нужно или нет это прописывать в css*/
   margin: 0;
@@ -193,11 +199,18 @@ fieldset {
 
 /*хлебные крошки*/
 .crumbs {
+  display: flex;
+  flex-wrap: wrap; /*перенос на новую сроку если дошел до предела области*/
+  justify-content: flex-start;
+  flex-wrap: wrap;
   font-size: 14px;
   line-height: 16px;
   list-style: none;
   font-weight: 400; /*жирность шрифта*/
-  /*color: var(--basic-white);*/
+}
+.crumbs li {
+  position: relative; /*указывает какой тип позиционирования используется для элемента (статический, относительный, абсолютный или фиксированный)*/
+  margin-right: 22px;
 }
 .crumbs a{
   color: var(--basic-white);
