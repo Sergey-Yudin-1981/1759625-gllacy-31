@@ -10,6 +10,8 @@
   --basic-darl-lite: #ababab; /*светло-серый*/
   --basic-green-lite: rgba(255, 255, 255, 0.2); /*светло-зеленый в основном цвет фона кнопок*/
   --brown-lite: #D07058; /*светло-коричневый*/
+  --basic-blu-lite: #8996A6;
+  --basic-brown: #9D8B84;
   /*
   --basic-black: #000000;
   --basic-extra-dark: #242424;
@@ -42,6 +44,7 @@ body {
   grid-template-rows: min-content 1fr min-content; /*правила расположения строк*/
   align-content: start; /*начинайся сначала*/
 }
+
 h2 {
   padding: 0;
   margin: 0;
@@ -50,10 +53,12 @@ h2 {
   padding: 16px 16px;
 }
 h3 {
+  margin-top: 0;
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-black-text);
+  padding: 24px 20px 0px 20px;
 }
 span {
   font-size: 30px;
@@ -64,40 +69,103 @@ span {
 fieldset {
   border: none;
 }
-
+.visually-hidden { /*скрывает не нужные заголовки*/
+  /*display: none;*/
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /*Контентная область центрируется и не может быть уже макетной ширины, поэтому 1146px*/
 .container {
   width: 1146px;
-  padding-left: 27px;
-  padding-right: 27px;
+  /*padding-left: 27px;
+  padding-right: 27px;*/
   margin-left: auto;
   margin-right: auto;
+  outline: 1px solid black; /*обводка*/
 }
 
+.slider{
+  position: relative; /*элемент с относительным позиционированием*/
+  padding-top: 275px;
+  text-align: center;
+  color: var(--basic-white);
+}
+.slider-list {
+  margin: 0;
+  /*padding: 0;*/
+  list-style: none;
+}
+.slide {
+  display: none;
+}
+
+.slide-current {
+  display: block;
+}
+.slide-title {
+  width: 700px;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 27px;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+}
+.slider-controls {
+  position: absolute;
+  bottom: 63px;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  width: 67px;
+  justify-content: space-between;
+}
+.slider-controls button {
+  padding: 0;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: 2px solid var(--basic-white);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slider-controls .current {
+  background-color: var(--basic-white);
+}
+.page-body {
+  min-width: 1200px;
+
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.page-body-1 {
+  background-color: var(--basic-green);
+  background-image: url("../img/ice-horns.png");
+}
+.page-body-2 {
+  background-color: var(--basic-blu-lite);
+  background-image: url("../img/ice-horns2.png");
+}
+.page-body-3 {
+  background-color: var(--basic-brown);
+  background-image: url("../img/ice-horns3.png");
+}
 .main-menu {
   display: flex;
   justify-content: space-between;
 }
-/*горизонтальное меню*/
-/*.login-link li {
-  /*display:inline-block; /* расположить пункты горизонтально */
-/*  margin-right: 9px; /* Отступ слева */
-  /*padding: 9px 23px;*/
-/*}
 
-/*горизонтальное меню*/
-/*.site-navigation li {
-  display:inline-block; /* расположить пункты горизонтально */
-  /*margin-right: 18px; /* Отступ слева */
-  /*padding: 9px 23px;*/
-/*}
-
-/*горизонтальное меню*/
-/*.crumbs li {
-  display:inline-block; /* расположить пункты горизонтально */
-  /*margin-right: 22px; /* Отступ слева */
-/*}
-/*конец хлебные крошки*/
+.features {
+  text-align: center;
+}
 
 /*grid*/
 .page {
@@ -115,9 +183,8 @@ fieldset {
   /*padding: 0 27px;*/
   font-size: 16px;
   line-height: 18px;
-  /*color: var(--basic-white);*/
-  /*background-color: transparent;*/
-  outline: 5px solid red;
+
+  outline: 1px solid red; /*обводка*/
   outline-offset: -5px;
 
 }
@@ -129,29 +196,29 @@ fieldset {
   align-items: center;
   width: 850px;
 
-  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline: 1px solid rgba(0, 255, 255, 0.3); /*обводка*/
   outline-offset: -5px;
 }
 
 .user-navigation {
   margin: 0;
-  width: 285px;
-  outline: 5px solid yellow;
+  padding: 0;
+  width: 300px;
+
+  outline: 1px solid yellow; /*обводка*/
   outline-offset: -5px;
 }
 
 
 .information {
-  /*display: grid; /*включаем гриды*/
-  /*justify-self: end;*/
   /*Делаем на флексах*/
   margin: 0;
   padding: 0;
-  /*margin-bottom: 8px;*/
   /*display: flex;
   justify-content: flex-end;*/
   text-align: right;
-  outline: 5px solid blue;
+
+  outline: 1px solid blue; /*обводка*/
   outline-offset: -5px;
 }
 
@@ -160,6 +227,8 @@ fieldset {
   grid-template-columns: 1fr 1fr;
   margin-bottom: 40px; /*отступ до следующего блока*/
   height: 229px;
+  margin-top: 41px;
+
 }
 
 /*меню главное*/
@@ -185,14 +254,14 @@ fieldset {
 }
 .site-navigation a {
   text-decoration: none; /*убираем подчеркивание у ссылок*/
-  border-bottom:1px solid var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  border-bottom: 1px solid var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
   /*text-decoration-color: rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
 }
 /*цвет ссылки меню и ссылки входа*/
 .site-navigation a,
 .telephone a,
 .button,
-.button-apply,
+.-apply,
 .hit-list a {
   color: var(--basic-white);
 }
@@ -202,7 +271,6 @@ fieldset {
   display: flex;
   flex-wrap: wrap; /*перенос на новую сроку если дошел до предела области*/
   justify-content: flex-start;
-  flex-wrap: wrap;
   font-size: 14px;
   line-height: 16px;
   list-style: none;
@@ -231,15 +299,32 @@ fieldset {
 
 /*кнопки поиска корзины и авторизации*/
 .login-link {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
-  /*text-decoration: none; /*убираем подчеркивание*/
   font-size: 14px;
   line-height: 16px;
+}
+.link::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url("img/search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.link {
+  position: relative; /*для позиционирования иконки относительно ссылки "вход"*/
+}
+.login-link svg {
+  margin: 10px;
 }
 
 .login-link a{
   background-color: var(--basic-green-lite); /*rgba(255, 255, 255, 0.2);*/
-  padding: 9px 13px; /* Поля вокруг текста */
+  padding: 8px 16px; /* Поля вокруг текста */
   border-radius: 20px;
   color: var(--basic-white);
   text-decoration: none;
@@ -257,15 +342,11 @@ fieldset {
 }
 .login-link a:hover {
   margin: 0;
-  /*stroke: red;*/
   color: var(--basic-black-text);
   background-color: var(--basic-white);
   padding: 9px 13px; /* Поля вокруг текста */
   border-radius: 20px;
   text-decoration: none;
-}
-svg:hover path {
-    fill: red;
 }
 
 .button-apply:hover{
@@ -293,6 +374,7 @@ svg:hover path {
 }
 
 .telephone {
+  margin: 0;
   font-size: 22px;
   line-height: 24px;
 }
@@ -305,10 +387,6 @@ svg:hover path {
   text-decoration: underline;
 }
 
-.features {
-  text-align: center;
-}
-
 .banner-basis {
   font-size: 60px;
   line-height: 60px;
@@ -316,6 +394,7 @@ svg:hover path {
 
 .button /*.button*/ {
   background: linear-gradient(180deg, #F26843 0%, #E74A35 100%); /*градиентная заливка*/
+  text-align: right;
   font-size: 18px;
   line-height: 24px;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76); /*тень текста*/
@@ -325,7 +404,8 @@ svg:hover path {
   text-decoration: none;
   display: inline-block;
 }
-.button-slide {
+
+.slide-button {
   font-size: 32px;
   line-height: 44px;
 }
@@ -395,20 +475,35 @@ svg:hover path {
 
 .raspberries {
   width: 560px;
+  min-height: 229px;
+  margin-right: 26px;
   border-radius: 16px;
   background-image: url("../img/backgraund-malina.jpg"); /* no-repeat; из-за этого не выходила картинка фоном*/
+}
+.raspberries a { /*кнопка расположение ее на блоке*/
+  display: block;
+  margin-left: 368px;
+  margin-right: 22px;
+  margin-top: 42px;
 }
 
 .chocolate {
   width: 560px;
+  min-height: 229px;
   border-radius: 16px;
   background-image: url("../img/backgraund-chocolate.jpg");
+}
+.chocolate a { /*кнопка расположение ее на блоке*/
+  display: block;
+  margin-left: 339px;
+  margin-right: 22px;
+  margin-top: 42px;
 }
 
 .banner {
   padding: 0;
   margin: 0;
-  padding: 0px 16px;
+  padding: 0px 30px 0px 16px;
   font-size: 18px;
 }
 /*хиты продаж*/
@@ -416,19 +511,39 @@ svg:hover path {
 .hit-list {
   margin: 0;
   padding: 0;
+  text-align: center; /*выравнивание текста по центру*/
   list-style: none;
   display: grid; /*включаем гриды*/
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;
+  /*width: 267px;*/
+  border: 1px solid red; /*обводка*/
+
 }
+.catalog-item { /*без этого класса не мог выранить картинку, не выстраивались гриды*/
+  margin: 0;
+  padding: 0;
+  width: 267px; /*ширина занимаемой области товара*/
+  min-height: 324px; /*мин высота если вдруг картинки не будет*/
+  margin-right: 26px; /*расстояние между карточками товаров*/
+  margin-bottom: 40px; /*отступ вниз между карточкамит товаров*/
+}
+
 .hit-list p {
+  padding: 0;
+  margin: 0;
+  margin-top: -65px;
+  margin-bottom: 33px;
   font-size: 45px;
   line-height: 45px;
+  text-align: left;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 .hit-list a {
+  margin: 0;
+  padding: 0;
+  margin-top: 13px;
   font-weight: 500; /*полужирный текст - параметр*/
-  /*text-align: center; /*выравнивание текста по центру*/
   text-decoration: none; /*убираем подчеркивание у ссылок*/
   border-bottom:1px solid var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
 }
@@ -437,18 +552,29 @@ svg:hover path {
 
 /*качество продукции*/
 .quality {
-  background-image: url("../img/pattern.jpg");
+  padding: 0;
+  margin: 0;
+
+  min-height: 306px;
+  background-image: url("../img/pattern2.jpg");
+  border-radius: 16px;
   margin-bottom: 40px;
   /*padding: 0px 27px;*/
 }
 .quality-list {
   margin: 0;
-  padding: 0;
+  display: grid; /*включаем гриды*/
+  grid-template-columns: 1fr 1fr;
+  padding-left: 23px;
   list-style: none;
   color: var(--basic-black-text);
 }
 
 .quality-item {
+  width: 485px;
+  margin-left: 52px;
+  margin-right: 23px;
+  margin-bottom: 20px; /*почему не помещается 33px????*/
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -456,17 +582,36 @@ svg:hover path {
 /*конец качества продукции*/
 
 /*новости*/
+
 .news-mail {
   display: grid; /*включаем гриды*/
   grid-template-columns: 1fr 1fr;
-  /*padding: 0px 27px;*/
+  height: 220px;
   margin-bottom: 40px;
 }
+.news {
+  background-image: url("../img/backgraund-news.jpg");
+  width: 560px;
+  min-height: 220px;
+  margin-right: 26px;
+  border-radius: 16px;
+}
 .news p {
+  margin: 0;
+  padding-left: 20px;
+  padding-top: 23px;
+  /*padding-bottom: 15px;*/
   font-weight: 500;
   color: var(--basic-black-text);
 }
 .news a {
+  margin: 0;
+  padding: 0;
+  display: block;
+  padding-left: 20px;
+  padding-right: 253px;
+  /*height: 77px;*/
+  /*width: 287px;*/
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -475,19 +620,43 @@ svg:hover path {
 /*конец нововсти*/
 
 /*отправка сообщения*/
+.mail {
+  background-image: url("../img/backgraund-mail.jpg");
+  border-radius: 16px;
+  width: 560px;
+  min-height: 220px;
+}
 .mail p {
+  margin: 0;
+  padding-left: 26px;
+  padding-top: 34px;
+  padding-right: 22px;
+  padding-bottom: 47px;
   font-weight: 400;
   color: var(--basic-neutral);
 }
 .mail input {
+  margin: 0;
+  padding: 0;
+  margin-left: 26px;
+  margin-right: 7px;
+  width: 350px;
+  height: 44px;
+  border-radius: 6px;
+  border-width: 1px;
+  border-style: double;
+  padding-left: 14px;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #999999;
+  border-color: rgba(178, 178, 178, 0.52);
 }
 .mail button {
   background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  padding: 9px 23px;
+  border-width: 0;
   font-size: 18px;
   line-height: 24px;
   border-radius: 70px;
@@ -586,18 +755,26 @@ svg:hover path {
   grid-template-columns: 1fr 1fr 1fr;*/
   /*делаем на флексах*/
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
 }
+
 .footer-social ul {
   margin: 0;
   padding: 0;
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 164px;
   list-style: none; /*убираем обозначанеи списка*/
 }
 .footer-contacts {
+  padding: 0;
+  margin: 0;
   width: 327px;
   text-align: center;
+  outline: 1px solid red; /*обводка*/
 }
 .footer-ico {
   margin: 0;
@@ -606,6 +783,11 @@ svg:hover path {
   text-align: left;
 }
 .footer-contacts-list {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /*правила расположения строк*/
+
   list-style: none; /*убираем обозначанеи списка*/
   color: var(--basic-white);
 }
@@ -617,6 +799,10 @@ svg:hover path {
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
+  text-align: left;
+}
+.footer-suppliers {
+  text-align: left;
 }
 .footer-suppliers a {
   font-weight: 700;
