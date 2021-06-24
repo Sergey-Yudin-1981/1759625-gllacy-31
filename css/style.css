@@ -1,6 +1,6 @@
 /*константы по цветам*/
 :root {
-  --basic-black-text: #323232;
+  --basic-black-text: #323232; /*черный*/
   --basic-green: #849D8F;
   --basic-brawn: #9D8B84;
   --basic-neutral: #8996A6;
@@ -54,6 +54,7 @@ h2 {
 }
 h3 {
   margin-top: 0;
+  margin-bottom: 7px;
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
@@ -89,7 +90,7 @@ fieldset {
   padding-right: 27px;*/
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid black; /*обводка*/
+  /*outline: 1px solid black; /*обводка*/
 }
 
 .slider{
@@ -174,17 +175,10 @@ fieldset {
 
 /* Main navigation */
 .main-navigation {
-  /*display: grid; /*включаем гриды*/
-  /*grid-template-columns: 2fr 1fr;*/
-  /*Делаем на флексах*/
-                /*display: flex;
-                align-items: center; /*выравнивание по вертикали в строке флекса*/
-                /*justify-content: space-between;*/
-  /*padding: 0 27px;*/
   font-size: 16px;
   line-height: 18px;
 
-  outline: 1px solid red; /*обводка*/
+  /*outline: 1px solid red; /*обводка*/
   outline-offset: -5px;
 
 }
@@ -196,7 +190,7 @@ fieldset {
   align-items: center;
   width: 850px;
 
-  outline: 1px solid rgba(0, 255, 255, 0.3); /*обводка*/
+  /*outline: 1px solid rgba(0, 255, 255, 0.3); /*обводка*/
   outline-offset: -5px;
 }
 
@@ -205,20 +199,23 @@ fieldset {
   padding: 0;
   width: 300px;
 
-  outline: 1px solid yellow; /*обводка*/
+  /*outline: 1px solid yellow; /*обводка*/
   outline-offset: -5px;
 }
-
+.information-crumbs {
+  display: flex;
+  align-items: flex-end;
+}
 
 .information {
-  /*Делаем на флексах*/
   margin: 0;
   padding: 0;
-  /*display: flex;
-  justify-content: flex-end;*/
   text-align: right;
+  /*----*/
+  order: 3;
+  margin-left: auto;
 
-  outline: 1px solid blue; /*обводка*/
+  /*outline: 1px solid blue; /*обводка*/
   outline-offset: -5px;
 }
 
@@ -268,13 +265,17 @@ fieldset {
 
 /*хлебные крошки*/
 .crumbs {
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap; /*перенос на новую сроку если дошел до предела области*/
   justify-content: flex-start;
+  align-items: flex-end;
   font-size: 14px;
   line-height: 16px;
   list-style: none;
   font-weight: 400; /*жирность шрифта*/
+  order: 1; /*---*/
 }
 .crumbs li {
   position: relative; /*указывает какой тип позиционирования используется для элемента (статический, относительный, абсолютный или фиксированный)*/
@@ -298,14 +299,16 @@ fieldset {
 }
 
 /*кнопки поиска корзины и авторизации*/
-.login-link {
+.user-navigation ul {
+  margin-bottom: 20px;
+  margin-top: 23px;
   display: flex;
   justify-content: space-between;
   list-style: none;
   font-size: 14px;
   line-height: 16px;
 }
-.link::before {
+/* .link::before {
   content: "";
   position: absolute;
   width: 16px;
@@ -313,21 +316,96 @@ fieldset {
   background-image: url("img/search.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-}
+} */
 
-.link {
+/*.link {
   position: relative; /*для позиционирования иконки относительно ссылки "вход"*/
-}
-.login-link svg {
+/*}*/
+/* .login-link svg {
   margin: 10px;
-}
+} */
 
-.login-link a{
+.user-navigation-link {
   background-color: var(--basic-green-lite); /*rgba(255, 255, 255, 0.2);*/
-  padding: 8px 16px; /* Поля вокруг текста */
   border-radius: 20px;
   color: var(--basic-white);
   text-decoration: none;
+  display: block;
+  height: 32px;
+  box-sizing: border-box;
+  transition: color .25s, background-color .25s;
+}
+.user-navigation-link path {
+  transition: fill .25s;
+}
+
+.user-navigation-link:hover {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.user-navigation-link:hover path {
+  fill: #000000;
+}
+
+.user-navigation-link--search {
+  padding: 8px;
+}
+
+.user-navigation-link--search svg {
+  display: block;
+}
+
+.user-navigation-link--action {
+  padding: 6px 16px;
+  display: flex;
+  align-items: center;
+}
+.user-navigation-link--action svg {
+  margin-right: 10px;
+}
+
+.user-navigation--item {
+  position: relative;
+}
+
+.user-navigation-popup {
+  display: block;
+  position: absolute;
+  background: #F8F7F4;
+  /*padding: 12px;*/
+  width: 341px;
+  height: 84px;
+  border-radius: 4px;
+  right: 0;
+  top: 36px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .35s, visibility .35s;
+}
+/*.popup-form--search {
+  background: #F8F7F4;
+  border-radius: 4px;
+}*/
+.popup-form--search input {
+  padding-left: 15px;
+  width: 294px;/*311px;*/
+  height: 42px;/*44px;*/
+  margin: 20px 15px;
+  border: 1px solid #D3D3D2;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #999999;
+}
+.popup-form--search-input {
+
+}
+.user-navigation-link:hover ~ .user-navigation-popup {
+  /* display: block; */
+  visibility: visible;
+  opacity: 1;
 }
 
 /*цвет меню при наведении*/
@@ -337,6 +415,14 @@ fieldset {
   background-color: var(--basic-white);
   padding: 9px 13px; /* Поля вокруг текста */
   margin: -13px;
+  border-radius: 26px;
+  text-decoration: none;
+}
+.site-navigation a:focus {
+  color: var(--basic-black-text);
+  background-color: #EDEDED;;
+  box-shadow: inset 0px 2px 1px #696969;/*0px -3px 0px var(--basic-dark);/*rgba(172, 16, 0, 0.64); /*тень кнопки*/
+  padding: 9px 13px; /* Поля вокруг текста */
   border-radius: 26px;
   text-decoration: none;
 }
@@ -371,6 +457,8 @@ fieldset {
 .work {
   font-size: 14px;
   line-height: 16px;
+  margin-top: 0;
+  margin-bottom: 8px;
 }
 
 .telephone {
@@ -381,7 +469,6 @@ fieldset {
 .telephone a {
   text-decoration: none;
 }
-
 
 .telephone a:hover{ /*при наведении на номер телефона появляется подчеркивание*/
   text-decoration: underline;
@@ -419,6 +506,12 @@ fieldset {
   box-shadow: inset 0px 2px 2px #942718;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76); /*тень текста*/
 }
+/*----*/
+.sorting-price-content {
+  width: 869px;
+  display: flex;
+}
+/*----*/
 .sorting {
   /*position: absolute;
   width: 196px;
@@ -445,7 +538,15 @@ fieldset {
   color: var(--basic-black-tex);
   background: #1E90FF; /*синий цвет*/
 }
-
+/*----*/
+.filler-apply {
+  display: flex;
+  align-items: center;
+}
+.filler-list {
+  display: flex;
+}
+/*----*/
 /*.price {
   position: absolute;
   width: 218px;
@@ -465,8 +566,10 @@ fieldset {
 .button-apply { /*кнопка применить*/
   background: var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*заливка*/
   border: 2px solid var(--basic-white); /*#FFFFFF; /*окантовка*/
+  color: var(--basic-white);
   box-sizing: border-box;
   border-radius: 20px; /*скругление углов*/
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   padding: 9px 29px; /* Поля вокруг текста */
@@ -565,19 +668,30 @@ fieldset {
   margin: 0;
   display: grid; /*включаем гриды*/
   grid-template-columns: 1fr 1fr;
-  padding-left: 23px;
+  padding-left: 20px;
   list-style: none;
   color: var(--basic-black-text);
 }
 
 .quality-item {
-  width: 485px;
+  /*width: 485px;
   margin-left: 52px;
-  margin-right: 23px;
-  margin-bottom: 20px; /*почему не помещается 33px????*/
+  margin-right: 23px;*/
+  display: flex;
+  width: 540px;
+  margin-bottom: 19px; /*почему не помещается 33px????*/
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+}
+.quality-item svg {
+  width: 49px;
+}
+.quality-item p {
+  margin-left: 6px;
+  margin-top: 7px;
+  width: 485px;
+  margin-bottom: 0;
 }
 /*конец качества продукции*/
 
@@ -653,15 +767,16 @@ fieldset {
   border-color: rgba(178, 178, 178, 0.52);
 }
 .mail button {
-  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  /*background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
-  padding: 9px 23px;
+  padding: 9px 23px;*/
   border-width: 0;
-  font-size: 18px;
+  cursor: pointer;
+  /*font-size: 18px;
   line-height: 24px;
   border-radius: 70px;
   color: var(--basic-white);
-  text-decoration: none;
+  text-decoration: none;*/
 }
 /*конец отправка сообщения*/
 
@@ -719,19 +834,35 @@ fieldset {
 .filler ul {
   list-style: none; /*убираем обозначанеи списка*/
 }
-.number-list {
-  list-style: none; /*убираем обозначанеи списка*/
-}
 
 /*обратная связь*/
 .contacts {
   width: 1200px;
+  height: 430px;
   margin-left: auto;
   margin-right: auto;
   background-color: #FEFEFE;
   color: var(--basic-black-text);
 }
+.contacts-form {
+  position: relative;
+  top: -400px;
+  left: 870px;
+  /* bottom: 65px; */
+  /*right: 27px;*/
+  background-color: #FEFEFE;
+  width: 253px;
+  padding: 31px 25px;
+  border-radius: 16px;
+}
 .contacts-text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.contacts-text-days {
+  margin-bottom: 31px;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -739,16 +870,176 @@ fieldset {
 .contacts-text-bold {
   font-size: 18px;
   line-height: 24px;
+  margin: 8px 0px 30px;
 }
-.contacts-text-bold a {
+.contacts-text-bold-tel {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 11px 0px 8px;
+}
+.contacts-text-bold-tel a {
   color: var(--basic-black-text);
   text-decoration: none;
 }
-.contacts-text-bold a:hover {
+.contacts-text-bold-tel a:hover {
   text-decoration: underline; /*при наведении на номер телефона появляется подчеркивание*/
 }
 /*конец обратная связь*/
+.button-send {
+  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  padding: 9px 23px;
+  border-width: 0;
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 70px;
+  color: var(--basic-white);
+  text-decoration: none;
+  margin-left: 290px;
+  cursor: pointer; /*при наведении был курсор в виде руки*/
+}
+.modal h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--basic-black-text);
+  /* padding: 24px 20px 0px 20px;*/
+}
+.login-form input {
+    /*margin: 0;*/
+    padding: 0;
+    width: 251px;
+    height: 42px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: double;
+    padding-left: 14px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #999999;
+    border-color: rgba(178, 178, 178, 0.52);
+}
+.modal {
+  position: fixed;
+  /*top: 0;*/
+  right: 0;
+  /*bottom: 0;*/
+  left: 0;
+  margin: auto;
+  background: #F8F7F4;
+  border-radius: 6px;
+}
+.modal-login {
+  /*display: none; /*скроем модальное окно отправки*/
+  top: 338px;
+  bottom: auto;
+  width: 428px;
+  padding: 20px 25px 27px;
+}
+.area-p {
+  margin-bottom: 25px;
+}
+.area {
+  width: 428px;
+  height: 154px;
+  resize: none; /*Не дает возможность изменять размеры области ввода текста*/
+  padding: 16px 14px;
+  /*padding-left: 14px;*/
+  font-family: "Roboto", Arial, sans-serif;
+  /*color: #999999;*/
+  font-size: 16px;
+  /*line-height: 20px;*/
+  /*background: var(--basic-white);*/
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  width: 18px;
+  height: 17px;
+  background-color: #F8F7F4;
+  border: 0;
+  cursor: pointer;
+}
+/*крестик закрыть на форме*/
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 1px;
+  width: 18px;
+  height: 2px;
+  background-color: #231F20;
+}
+.modal-close::before {
+  transform: rotate(45deg); /*поворот палочек на 45 градусов*/
+}
+.modal-close::after {
+  transform: rotate(-45deg); /*поворот палочек на -45 градусов*/
+}
+.login-icon-user:hover {
+  width: 249px;
+  height: 40px;
+  border: 2px solid rgba(178, 178, 178, 0.52);
+}
+.login-icon-user:focus {
+  width: 249px;
+  height: 40px;
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  outline: 0; /*уюирает браузерную обводку*/
+}
+.area:hover {
+  width: 428px;
+  height: 154px;
+  border: 2px solid rgba(178, 178, 178, 0.52);
+}
+.area:focus {
+  width: 428px;
+  height: 154px;
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  outline: 0; /*уюирает браузерную обводку*/
+}
 
+/*нумерация страниц*/
+.number-list {
+  margin: 0;
+  margin-left: 954px; /*952px;*/
+  padding: 0;
+  list-style: none; /*убираем обозначанеи списка*/
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 194px;
+  height: 26px;
+
+}
+.number-list--number {
+  text-decoration: none; /*убираем подчеркивание у ссылок*/
+  color: var(--basic-white);
+  height: 26px;
+  line-height: 18px;
+  font-weight: 500;
+  box-sizing: border-box;
+  padding: 0px 5px;
+  margin: 0px 5px;
+}
+.number-list--number:hover {
+  border-radius: 50%;
+  background-color: var(--basic-green-lite);
+}
+.number-list--active {
+  color: var(--basic-black-text);
+  background-color: var(--basic-white);
+  border-radius: 50%;
+  /*padding: 7px 8px;*/
+}
 /*подвал*/
 .main-footer {
   /*display: grid;
@@ -774,7 +1065,7 @@ fieldset {
   margin: 0;
   width: 327px;
   text-align: center;
-  outline: 1px solid red; /*обводка*/
+  /*outline: 1px solid red; /*обводка*/
 }
 .footer-ico {
   margin: 0;
@@ -791,7 +1082,7 @@ fieldset {
   list-style: none; /*убираем обозначанеи списка*/
   color: var(--basic-white);
 }
-.footer-contacts-list a {
+.footer-contacts-list-link {
   color: var(--basic-white);
   text-decoration: none; /*убираем подчеркивание у ссылок*/
   border-bottom:1px solid var(--basic-green-lite);/*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
@@ -800,12 +1091,25 @@ fieldset {
   font-size: 13px;
   line-height: 18px;
   text-align: left;
+  margin-left: 22px;
 }
+.footer-suppliers:nth-child(2n) .footer-contacts-list-link {
+  margin-left: 0;
+}
+.footer-contacts-list-link--svg {
+  font-weight: 700;
+  position: relative;
+}
+
+.footer-contacts-list-link--svg svg {
+  position: absolute;
+  display: block;
+  left: -22px;
+  top: 1px;
+}
+
 .footer-suppliers {
   text-align: left;
-}
-.footer-suppliers a {
-  font-weight: 700;
 }
 .footer-copyright {
   font-weight: 400;

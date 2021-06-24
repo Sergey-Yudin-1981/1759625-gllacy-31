@@ -53,15 +53,17 @@
             </ul>
           </div>
         </div>
-          <div class="information"> <!--часы работы и телефон-->
-            <p class="work">с 10 до 20, ежедневно</p>
-            <p class="telephone"><a href="tel:+78124502525">8 812 450-25-25</a></p>
-          </div>
-          <ul class="crumbs">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li>Сливочное</li>
-          </ul>
+        <div class="information-crumbs">
+            <div class="information"> <!--часы работы и телефон-->
+              <p class="work">с 10 до 20, ежедневно</p>
+              <p class="telephone"><a href="tel:+78124502525">8 812 450-25-25</a></p>
+            </div>
+            <ul class="crumbs">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
+              <li>Сливочное</li>
+            </ul>
+        </div>
       </nav>
     </header>
     <main class="container">
@@ -237,28 +239,29 @@
             <!--</a>-->
           </li>
         </ul>
-        <!--список страниц для перехода-->
+      </section>
+      <section> <!--список страниц для перехода-->
         <ul class="number-list">
           <li>
-            <a href="#">&#60;</a>
+            <a class="number-list--number" href="#">&#60;</a>
           </li>
           <li>
-            <a>1</a>
+            <a class="number-list--number number-list--active">1</a>
           </li>
           <li>
-            <a href="#">2</a>
+            <a class="number-list--number" href="#">2</a>
           </li>
           <li>
-            <a href="#">3</a>
+            <a class="number-list--number" href="#">3</a>
           </li>
           <li>
-            <a href="#">4</a>
+            <a class="number-list--number" href="#">4</a>
           </li>
           <li>
-            <a href="#">5</a>
+            <a class="number-list--number" href="#">5</a>
           </li>
           <li>
-            <a href="#">&#62;</a>
+            <a class="number-list--number" href="#">&#62;</a>
           </li>
         </ul>
       </section>
@@ -308,26 +311,27 @@
           </li>
         </ul>
       </section>
-      <section class="footer-contacts">
+      <section class="footer-contacts"> <!--контактная информация для пользователей-->
         <ul class="footer-contacts-list">
           <li class="footer-suppliers">
-            <svg width="15" height="13" viewBox="0 0 15 13" fill="none">
-            <path d="M10.8 0.00081161C10.1584 1.47209e-05 9.52561 0.149795 8.95246 0.438107C8.37931 0.726419 7.88182 1.14521 7.5 1.66081C7.11818 1.14521 6.62069 0.726419 6.04754 0.438107C5.47439 0.149795 4.84158 1.47209e-05 4.2 0.00081161C3.11401 -0.0207343 2.06346 0.387449 1.2769 1.13655C0.490337 1.88566 0.0314232 2.91507 0 4.00081C0 7.18081 7.5 13.0008 7.5 13.0008C7.5 13.0008 15 7.22081 15 4.00081C14.9686 2.91507 14.5097 1.88566 13.7231 1.13655C12.9365 0.387449 11.886 -0.0207343 10.8 0.00081161Z" fill="white"/>
-            </svg>
-            <a href="blank.html">Для поставщиков</a>
+            <a class="footer-contacts-list-link footer-contacts-list-link--svg" href="blank.html">
+              <svg width="15" height="13" viewBox="0 0 15 13" fill="none">
+                <path d="M10.8 0.00081161C10.1584 1.47209e-05 9.52561 0.149795 8.95246 0.438107C8.37931 0.726419 7.88182 1.14521 7.5 1.66081C7.11818 1.14521 6.62069 0.726419 6.04754 0.438107C5.47439 0.149795 4.84158 1.47209e-05 4.2 0.00081161C3.11401 -0.0207343 2.06346 0.387449 1.2769 1.13655C0.490337 1.88566 0.0314232 2.91507 0 4.00081C0 7.18081 7.5 13.0008 7.5 13.0008C7.5 13.0008 15 7.22081 15 4.00081C14.9686 2.91507 14.5097 1.88566 13.7231 1.13655C12.9365 0.387449 11.886 -0.0207343 10.8 0.00081161Z" fill="white"/>
+              </svg>
+            Для поставщиков</a>
           </li>
-          <li>
-            <a href="blank.html">О производстве</a>
+          <li class="footer-suppliers">
+            <a class="footer-contacts-list-link" href="blank.html">О производстве</a>
           </li>
-          <li>
-            <a href="blank.html">Наши документы</a>
+          <li class="footer-suppliers">
+            <a class="footer-contacts-list-link" href="blank.html">Наши документы</a>
           </li>
-          <li>
-            <a href="blank.html">Экологические стандарты</a>
+          <li class="footer-suppliers">
+            <a class="footer-contacts-list-link" href="blank.html">Экологические стандарты</a>
           </li>
         </ul>
       </section>
-      <section>
+      <section class="footer-ico"> <!--Сделано-->
         <p><a href="https://htmlacademy.ru/"><img src="img/html-academy.svg" width="108" height="31" alt=""></a></p>
         <p class="footer-copyright">Сделано <a href="https://htmlacademy.ru/">в HTML Academy</a> © 2021</p>
       </section>
