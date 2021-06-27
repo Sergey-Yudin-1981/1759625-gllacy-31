@@ -39,21 +39,20 @@
                   <div class="user-navigation-popup">
                     <!--что-то из попапа-->
                     <form class="popup-form--search" action="https://echo.htmlacademy.ru" method="post">
-                      <!--<p class="login-form-user"> <!--Поле поиска-->
+                        <!--Поле поиска-->
                         <label class="visually-hidden" for="login-name">Поиск</label>
                         <input class="popup-form--search-input" id="login-name" type="text" name="name" placeholder="Крем-брюле">
-                      <!--</p>-->
                     </form>
                   </div>
                 </li>
-                <li><a class="user-navigation-link user-navigation-link--action" href="blank.html" href="blank.html">
+                <li><a class="user-navigation-link user-navigation-link--action" href="blank.html">
                       <svg width="20" height="19" viewBox="0 0 20 19" fill="none">
                         <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="white"/>
                         <path d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z" fill="white"/>
                       </svg>
                     Вход</a>
                 </li>
-                <li><a class="user-navigation-link user-navigation-link--action" href="blank.html" href="blank.html">
+                <li><a class="user-navigation-link user-navigation-link--action" href="blank.html">
                       <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
                         <path d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z" fill="white"/>
                         <path d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="white"/>
@@ -72,7 +71,7 @@
               <ul class="crumbs">
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="catalog.html">Каталог</a></li>
-                <li>Сливочное</li>
+                <li class="breadcrumbs-current">Сливочное</li>
               </ul>
           </div>
         </nav>
@@ -106,7 +105,9 @@
                 </label>
                 <!--Пока не знаю как сделать сортировку??? -->
                 <div class="range-controls"> <!--сортировка по цене нашел в интернете https://codepen.io/3gdata/pen/VYmEgb-->
-                  <div class="scale"><div style="margin-left:50px;width:100px;" class="bar"></div></div>
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
                   <div class="toggle min-toggle"></div>
                   <div class="toggle max-toggle"></div>
                 </div>
@@ -114,20 +115,20 @@
               <fieldset class="content"> <!--Жирность-->
                 <legend>Жирность</legend>
                 <ul class="content-list">
-                  <li>
-                    <input type="radio" name="fat" value="0%" id="0">
+                  <li class="content-list--item">
+                    <input class="visually-hidden filter-input-radio" type="radio" name="fat" value="0%" id="0">
                     <label for="0">0%</label>
                   </li>
-                  <li>
-                    <input type="radio" name="fat" value="10%" id="10" checked>
+                  <li class="content-list--item">
+                    <input class="visually-hidden filter-input-radio" type="radio" name="fat" value="10%" id="10" checked>
                     <label for="10">до 10%</label>
                   </li>
-                  <li>
-                    <input type="radio" name="fat" value="30%" id="30">
+                  <li class="content-list--item">
+                    <input class="visually-hidden filter-input-radio" type="radio" name="fat" value="30%" id="30">
                     <label for="30">до 30%</label>
                   </li>
-                  <li>
-                    <input type="radio" name="fat" value="above-30%" id="above-30">
+                  <li class="content-list--item">
+                    <input class="visually-hidden filter-input-radio" type="radio" name="fat" value="above-30%" id="above-30">
                     <label for="above-30">выше 30%</label>
                   </li>
                 </ul>
@@ -137,24 +138,24 @@
               <fieldset class="filler"> <!--Наполнители-->
                 <legend>Наполнители</legend>
                 <ul class="filler-list">
-                  <li>
-                    <input type="checkbox" name="chocolate" id="chocolate" checked>
+                  <li class="filler-list--item">
+                    <input class="visually-hidden filler-input-checkbox" type="checkbox" name="chocolate" id="chocolate" checked>
                     <label for="chocolate">шоколадные</label>
                   </li>
-                  <li>
-                    <input type="checkbox" name="powdered-sugar" id="powdered-sugar" checked>
+                  <li class="filler-list--item">
+                    <input class="visually-hidden filler-input-checkbox" type="checkbox" name="powdered-sugar" id="powdered-sugar" checked>
                     <label for="powdered-sugar">сахарные присыпки</label>
                   </li>
-                  <li>
-                    <input type="checkbox" name="fruits" id="fruits">
+                  <li class="filler-list--item">
+                    <input class="visually-hidden filler-input-checkbox" type="checkbox" name="fruits" id="fruits">
                     <label for="fruits">фрукты</label>
                   </li>
-                  <li>
-                    <input type="checkbox" name="syrups" id="syrups">
+                  <li class="filler-list--item">
+                    <input class="visually-hidden filler-input-checkbox" type="checkbox" name="syrups" id="syrups">
                     <label for="syrups">сиропы</label>
                   </li>
-                  <li>
-                    <input type="checkbox" name="jams" id="jams">
+                  <li class="filler-list--item">
+                    <input class="visually-hidden filler-input-checkbox" type="checkbox" name="jams" id="jams">
                     <label for="jams">джемы</label>
                   </li>
                 </ul>
@@ -164,7 +165,7 @@
           </form>
       </section>
       <section class="hit"> <!--Перечень товаров-->
-        <h2>Список мороженого</h2>
+        <h2 class="visually-hidden">Список мороженого</h2>
         <ul class="hit-list">
           <li class="catalog-item">
             <!--<a href="blank.html">-->
