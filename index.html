@@ -295,29 +295,31 @@
       </section>
     </footer>
   </div>
-  <section class="modal modal-login">
-    <h3>Мы обязательно вам ответим!</h3>
-    <!--<p class="modal-description">Введите пожалуйста свой логин и пароль</p>-->
-    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-      <p class="login-form-user"> <!--Поле ФИО-->
-        <label class="visually-hidden" for="login-name-form">ФИО</label>
-        <input class="login-icon-user" id="login-name-form" type="text" name="name" placeholder="Имя Фамилия">
-      </p>
-      <p class="login-form-user"> <!--Поле email-->
-        <label class="visually-hidden" for="login-login">Логин</label>
-        <input class="login-icon-user" id="login-login" type="email" name="login" placeholder="email@example.com">
-      </p>
-      <!--<p>
-        <label class="visually-hidden" for="login-password">Пароль</label>
-        <input class="login-icon-password" id="login-password" type="password" name="password" placeholder="••••••••">
-      </p> -->
-      <p class="area-p"> <!--Область ввода теста-->
-         <label class="visually-hidden" for="comment-field">Тест</label>
-         <textarea class="area" id="comment-field" name="comment" placeholder="В свободной форме"></textarea>
-      </p>
-      <button class="button button-send" type="submit">Отправить</button> <!--class="button"-->
-    </form>
-    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  <section class="modal modal-login" style="display: none;">
+    <div class="modal-body">
+      <h3>Мы обязательно вам ответим!</h3>
+      <!--<p class="modal-description">Введите пожалуйста свой логин и пароль</p>-->
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="login-form-user"> <!--Поле ФИО-->
+          <label class="visually-hidden" for="login-name-form">ФИО</label>
+          <input class="login-icon-user" id="login-name-form" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p class="login-form-user"> <!--Поле email-->
+          <label class="visually-hidden" for="login-login">Логин</label>
+          <input class="login-icon-user" id="login-login" type="email" name="login" placeholder="email@example.com">
+        </p>
+        <!--<p>
+          <label class="visually-hidden" for="login-password">Пароль</label>
+          <input class="login-icon-password" id="login-password" type="password" name="password" placeholder="••••••••">
+        </p> -->
+        <p class="area-p"> <!--Область ввода теста-->
+           <label class="visually-hidden" for="comment-field">Тест</label>
+           <textarea class="area" id="comment-field" name="comment" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button button-send" type="submit">Отправить</button> <!--class="button"-->
+      </form>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    </div>
   </section>
 </body>
 </html>
