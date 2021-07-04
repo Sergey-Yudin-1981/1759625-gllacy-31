@@ -249,12 +249,12 @@ fieldset {
   width: 154px;
   height: 64px;
 }
-.catalog-list--menu {
+.catalog-list-menu {
   text-decoration: none; /*убираем подчеркивание у ссылок*/
   border-bottom: 1px solid var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
 }
 /*цвет ссылки меню и ссылки входа*/
-.catalog-list--menu,
+.catalog-list-menu,
 .telephone a,
 .button,
 .-apply,
@@ -303,7 +303,7 @@ fieldset {
 /*конец хлебные крошки*/
 
 /*меню каталог с catalog.html*/
-.mark .catalog-list--menu {
+.mark .catalog-list-menu {
   background: var(--brown-lite);/* #D07058;*/
   padding: 9px 13px; /* Поля вокруг текста */
   margin: -13px;
@@ -313,20 +313,7 @@ fieldset {
   border-radius: 26px;
   text-decoration: none;
 }
-/*.catalog-list {
-  display: block;
-  position: absolute;
-  width: 143px;
-  height: 171px;
-  border-radius: 4px;
-  left: -22px;
-  top: 36px;
-  visibility: hidden;
-  background: var(--basic-white);
-  z-index: 4;
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
-}*/
-.main-menu-sub {
+.site-navigation-sub {
   padding: 0;
   /*padding: 6px 9px 6px 6px;*/
   list-style: none;
@@ -336,17 +323,17 @@ fieldset {
   height: 171px;
   border-radius: 4px;
   left: -22px;
-  top: 32px;
+  top: 30px;
   background: var(--basic-white);
   z-index: 4;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   font-weight: 400;
 }
-.main-menu-sub a {
+.site-navigation-sub a {
   text-decoration: none;
   color: var(--basic-black-text);
 }
-.main-menu-sub--VIP {
+.site-navigation-link-VIP {
   padding: 13px 0px 15px 15px;
   font-weight: 700;
   font-size: 14px;
@@ -354,18 +341,18 @@ fieldset {
   border-bottom: 1px solid rgba(50, 50, 50, 0.2);
   margin: 0px 9px 0px 6px;
 }
-.main-menu-sub--element {
+.site-navigation-link-element {
   padding: 7px 0px 7px 21px;
   font-size: 14px;
   line-height: 16px;
 }
-.main-menu-sub--element:hover {
+.site-navigation-link-element:hover {
   background-color: #FBDED7;
 }
-.main-menu-sub--element:focus {
+.site-navigation-link-element:focus {
   background-color: #F6B5A5;
 }
-.site-navigation--link:hover .main-menu-sub {
+.site-navigation-link:hover .site-navigation-sub {
   visibility: visible;
   display: block;
 }
@@ -399,10 +386,10 @@ fieldset {
 .user-navigation-link:hover path {
   fill: #000000;
 }
-.user-navigation-link--search {
+.user-navigation-link-search {
   padding: 8px;
 }
-.user-navigation-link--search svg {
+.user-navigation-link-search svg {
   display: block;
 }
 .user-navigation-link-basket {
@@ -415,15 +402,15 @@ fieldset {
   box-sizing: border-box;
   transition: color .25s, background-color .25s;
 }
-.user-navigation-link--action {
+.user-navigation-link-action {
   padding: 6px 16px;
   display: flex;
   align-items: center;
 }
-.user-navigation-link--action svg {
+.user-navigation-link-action svg {
   margin-right: 10px;
 }
-.user-navigation--item {
+.user-navigation-item {
   position: relative;
 }
 .user-navigation-popup {
@@ -440,21 +427,21 @@ fieldset {
   top: 36px;
   padding: 10px;
 }
-.user-navigation--item:hover .user-navigation-popup {
+.user-navigation-item:hover .user-navigation-popup {
   /* display: block; */
   visibility: visible;
   opacity: 1;
 }
-.user-navigation-popup--search {
+.user-navigation-popup-search {
   /*padding: 12px;*/
   width: 321px;
   height: 64px;
 }
-/*.popup-form--search {
+/*.popup-form-search {
   background: #F8F7F4;
   border-radius: 4px;
 }*/
-.popup-form--search input {
+.popup-form-search input {
   padding-left: 15px;
   width: 292px;
   height: 40px;
@@ -466,31 +453,31 @@ fieldset {
   line-height: 16px;
   color: #999999;
 }
-.popup-form--search input:hover {
+.popup-form-search input:hover {
   width: 291px;
   height: 38px;
   padding-left: 14px;
   border: 2px solid rgba(178, 178, 178, 0.52);
 }
-.popup-form--search input:focus-visible {
+.popup-form-search input:focus-visible {
   outline: none;
 }
-.popup-form--search input:focus {
+.popup-form-search input:focus {
   width: 291px;
   height: 38px;
   color: var(--basic-black-text);
   font-weight: 700;
   border: 2px solid rgba(46, 136, 228, 0.52);
 }
-.popup-form--search-input {
+.popup-form-search-input {
 
 }
 
-.user-navigation-popup--link {
+.user-navigation-popup-link {
   width: 277px;
   height: 194px;
 }
-.popup-form--link input {
+.popup-form-link input {
   padding-left: 15px;
   width: 241px;
   height: 44px;
@@ -502,44 +489,44 @@ fieldset {
   line-height: 16px;
   color: #999999;
 }
-.popup-form--link input:hover {
+.popup-form-link input:hover {
   width: 240px;
   height: 42px;
   padding-left: 14px;
   border: 2px solid rgba(178, 178, 178, 0.52);
 }
-.popup-form--link input:focus-visible {
+.popup-form-link input:focus-visible {
   outline: none;
 }
-.popup-form--link input:focus {
+.popup-form-link input:focus {
   width: 240px;
   height: 42px;
   color: var(--basic-black-text);
   font-weight: 700;
   border: 2px solid rgba(46, 136, 228, 0.52);
 }
-.popup-form--link-enter {
+.popup-form-link-enter {
   display: flex;
   width: 280px;
   height: 44px;
   align-items: center;
   padding-top: 10px;
 }
-.popup-form--link-button {
+.popup-form-link-button {
   margin: 0px 20px 0px 19px;
 }
-.popup-form--link button {
+.popup-form-link button {
   border: none;
   box-shadow: none;
 }
-.popup-form--link-help {
+.popup-form-link-help {
   display: flex;
   flex-wrap: wrap;
   width: 140px;
   font-size: 13px;
   line-height: 15px;
 }
-.popup-form--link-help a {
+.popup-form-link-help a {
   text-decoration: none;
   color: var(--basic-black-text);
   border-bottom:1px solid var(--basic-darl-lite);
@@ -548,11 +535,11 @@ fieldset {
   margin-top: 4px;
 }
 
-.user-navigation-popup--basket {
+.user-navigation-popup-basket {
   width: 519px;
   height: 222px;
 }
-.popup-form--button-basket {
+.popup-form-button-basket {
   padding: 13px 15px;
   margin-left: 322px;
   border: none;
@@ -567,7 +554,7 @@ fieldset {
   font-weight: 700;
   color: var(--basic-white);
 }
-.user-navigation-popup--table {
+.user-navigation-popup-table {
   color: var(--basic-black-text);
   font-weight: 400;
   font-size: 13px;
@@ -577,7 +564,7 @@ fieldset {
   padding-left: 11px;
   border-bottom: 1px solid var(--basic-dark-lite-lite);
 }
-.user-navigation-popup--table span {
+.user-navigation-popup-table span {
   font-size: 13px;
   line-height: 16px;
   text-shadow: none;
@@ -601,7 +588,7 @@ fieldset {
   width: 71px;
   text-align: right;
 }
-.user-navigation-popup--basket p {
+.user-navigation-popup-basket p {
   color: var(--basic-black-text);
   font-size: 15px;
   text-align: right;
@@ -609,12 +596,12 @@ fieldset {
   margin-top: 16px;
 }
 
-.user-navigation-link-basket:hover .user-navigation-popup--basket{
+.user-navigation-link-basket:hover .user-navigation-popup-basket{
   display: block;
   /*position: absolute;*/
 }
 /*цвет меню при наведении*/
-.catalog-list--menu:hover {
+.catalog-list-menu:hover {
   margin: 0;
   color: var(--basic-black-text);
   background-color: var(--basic-white);
@@ -624,7 +611,7 @@ fieldset {
   border-radius: 26px;
   text-decoration: none;
 }
-.catalog-list--menu:focus {
+.catalog-list-menu:focus {
   color: var(--basic-black-text);
   background-color: #EDEDED;;
   box-shadow: inset 0px 2px 1px #696969;/*0px -3px 0px var(--basic-dark);/*rgba(172, 16, 0, 0.64); /*тень кнопки*/
@@ -738,7 +725,7 @@ fieldset {
   padding: 7px 40px 10px 16px; /* Поля вокруг текста */
   outline: none; /*убирает браузерную обводку*/
 }
-.select--right {
+.select-right {
   background-image: url("../img/arrow-white.svg");
   background-repeat: no-repeat;
   background-position: right 13px center;
@@ -1151,7 +1138,7 @@ fieldset {
   padding-left: 14px;
   margin-bottom: 7px;
 }
-.content-list--item {
+.content-list-item {
   /*display: flex;
   align-items: center;*/
 
@@ -1159,14 +1146,14 @@ fieldset {
   margin-right: 19px;
   position: relative;
 }
-.content-list--item:last-child {
+.content-list-item:last-child {
   margin-right: 0;
 }
-.content-list--item input {
+.content-list-item input {
   margin: 0;
   margin-right: 11px;
 }
-.content-list--item label {
+.content-list-item label {
   position: relative;
   display: block;
   cursor: pointer;
@@ -1219,15 +1206,15 @@ fieldset {
   background: var(--basic-green-lite);
   border-radius: 20px;
 }
-.filler-list--item {
+.filler-list-item {
   padding-left: 34px;
   margin-right: 19px;
   position: relative;
 }
-.filler-list--item:last-child {
+.filler-list-item:last-child {
   margin-right: 0;
 }
-.filler-list--item label {
+.filler-list-item label {
   position: relative;
   display: block;
   cursor: pointer;
@@ -1350,6 +1337,7 @@ fieldset {
     border-color: rgba(178, 178, 178, 0.52);
 }
 .modal {
+  display: none; /*скроем модальное окно отправки*/
   position: fixed;
   top: 0;
   right: 0;
@@ -1361,7 +1349,7 @@ fieldset {
   justify-content: center;
 }
 .modal-body {
-  /*display: none; /*скроем модальное окно отправки*/
+  display: none; /*скроем модальное окно отправки*/
   /* position: absolute;
   top: 338px; */
   position: relative;
@@ -1456,7 +1444,7 @@ fieldset {
   height: 26px;
 
 }
-.number-list--number {
+.number-list-number {
   text-decoration: none; /*убираем подчеркивание у ссылок*/
   color: var(--basic-white);
   height: 26px;
@@ -1466,13 +1454,13 @@ fieldset {
   padding: 0px 5px;
   margin: 0px 5px;
 }
-.number-list--number:hover {
+.number-list-number:hover {
   border-radius: 50%;
   background-color: var(--basic-green-lite);
   padding: 3px 8px;
   margin: 0px 2px;
 }
-.number-list--active {
+.number-list-active {
   color: var(--basic-black-text);
   background-color: var(--basic-white);
   border-radius: 50%;
@@ -1497,10 +1485,10 @@ fieldset {
   width: 164px;
   list-style: none; /*убираем обозначанеи списка*/
 }
-.footer-social--link:hover path {
+.footer-social-link:hover path {
   fill-opacity: 1;
 }
-.footer-social--link:hover g {
+.footer-social-link:hover g {
   opacity: 1;
 }
 .footer-contacts {
@@ -1539,12 +1527,12 @@ fieldset {
 .footer-suppliers:nth-child(2n) .footer-contacts-list-link {
   margin-left: 0;
 }
-.footer-contacts-list-link--svg {
+.footer-contacts-list-link-svg {
   font-weight: 700;
   position: relative;
 }
 
-.footer-contacts-list-link--svg svg {
+.footer-contacts-list-link-svg svg {
   position: absolute;
   display: block;
   left: -22px;

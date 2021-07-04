@@ -23,56 +23,60 @@
                 <img src="img/logo.svg" width="154" height="64" alt="">
               </a>
               <ul class="site-navigation"> <!--основное меню-->
-                <li class="site-navigation--link mark">
-                  <a class="site-navigation-li catalog-list--menu" href="catalog.html">Каталог</a>
-                  <ul class="main-menu-sub">
-                    <li class="main-menu-sub--VIP"><a href="">Новинки</a></li>
-                    <li class="main-menu-sub--element"><a href="">Сливочное</a></li>
-                    <li class="main-menu-sub--element"><a href="">Щербеты</a></li>
-                    <li class="main-menu-sub--element"><a href="">Фруктовый лед</a></li>
-                    <li class="main-menu-sub--element"><a href="">Мералин</a></li>
+                <li class="site-navigation-link mark">
+                  <a class="site-navigation-li catalog-list-menu" href="catalog.html">Каталог</a>
+                  <ul class="site-navigation-sub">
+                    <li class="site-navigation-link-VIP"><a href="">Новинки</a></li>
+                    <li class="site-navigation-link-element"><a href="">Сливочное</a></li>
+                    <li class="site-navigation-link-element"><a href="">Щербеты</a></li>
+                    <li class="site-navigation-link-element"><a href="">Фруктовый лед</a></li>
+                    <li class="site-navigation-link-element"><a href="">Мералин</a></li>
                   </ul>
                 </li>
-                <li><a class="site-navigation-li catalog-list--menu" href="blank.html">Доставка и оплата</a></li>
-                <li><a class="site-navigation-li catalog-list--menu" href="blank.html">О компании</a></li>
+                <li>
+                  <a class="site-navigation-li catalog-list-menu" href="blank.html">Доставка и оплата</a>
+                </li>
+                <li>
+                  <a class="site-navigation-li catalog-list-menu" href="blank.html">О компании</a>
+                </li>
               </ul>
             </div>
             <div class="user-navigation"> <!--меню авторизации-->
               <ul>
-                <li class="user-navigation--item"> <!--поиск-->
-                  <a class="user-navigation-link user-navigation-link--search" href="blank.html"> <!--Поиск-->
+                <li class="user-navigation-item"> <!--поиск-->
+                  <a class="user-navigation-link user-navigation-link-search" href="blank.html"> <!--Поиск-->
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z" fill="white"/>
                       </svg>
                   </a>
-                  <div class="user-navigation-popup user-navigation-popup--search">
+                  <div class="user-navigation-popup user-navigation-popup-search">
                     <!--что-то из попапа-->
-                    <form class="popup-form--search" action="https://echo.htmlacademy.ru" method="post">
+                    <form class="popup-form-search" action="https://echo.htmlacademy.ru" method="post">
                         <!--Поле поиска-->
                         <label class="visually-hidden" for="login-name">Поиск</label>
-                        <input class="popup-form--search-input" id="login-name" type="text" name="name" placeholder="Крем-брюле">
+                        <input class="popup-form-search-input" id="login-name" type="text" name="name" placeholder="Крем-брюле">
                     </form>
                   </div>
                 </li>
-                <li class="user-navigation--item"> <!--вход-->
-                  <a class="user-navigation-link user-navigation-link--action" href="blank.html">
+                <li class="user-navigation-item"> <!--вход-->
+                  <a class="user-navigation-link user-navigation-link-action" href="blank.html">
                       <svg width="20" height="19" viewBox="0 0 20 19" fill="none">
                         <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="white"/>
                         <path d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z" fill="white"/>
                       </svg>
                     Вход
                   </a>
-                  <div class="user-navigation-popup user-navigation-popup--link">
+                  <div class="user-navigation-popup user-navigation-popup-link">
                     <!--что-то из попапа-->
-                    <form class="popup-form--link" action="https://echo.htmlacademy.ru" method="post">
+                    <form class="popup-form-link" action="https://echo.htmlacademy.ru" method="post">
                         <!--Поле ввода данных-->
                         <label class="visually-hidden" for="login-email">Маил</label>
-                        <input class="popup-form--link-input" id="login-email" type="email" name="name" placeholder="email@example.com">
+                        <input class="popup-form-link-input" id="login-email" type="email" name="name" placeholder="email@example.com">
                         <label class="visually-hidden" for="login-password">Пароль</label>
-                        <input class="popup-form--link-input" id="login-password" type="password" name="name" placeholder="password">
-                        <div class="popup-form--link-enter">
-                          <button class="popup-form--link-button button" type="button">Войти</button>
-                          <div class="popup-form--link-help">
+                        <input class="popup-form-link-input" id="login-password" type="password" name="name" placeholder="password">
+                        <div class="popup-form-link-enter">
+                          <button class="popup-form-link-button button" type="button">Войти</button>
+                          <div class="popup-form-link-help">
                             <a href="#">Забыли пароль?</a>
                             <a href="#">Новая регистрация</a>
                           </div>
@@ -80,8 +84,8 @@
                     </form>
                   </div>
                 </li>
-                <li class="user-navigation--item"> <!--корзина-->
-                  <a class="user-navigation-link-basket user-navigation-link--action" href="blank.html">
+                <li class="user-navigation-item"> <!--корзина-->
+                  <a class="user-navigation-link-basket user-navigation-link-action" href="blank.html">
                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="#343434"/>
                       <path d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" fill="#343434"/>
@@ -90,8 +94,8 @@
                     </svg>
                     2 товара
                   </a>
-                  <div class="user-navigation-popup user-navigation-popup--basket">
-                    <table class="user-navigation-popup--table">
+                  <div class="user-navigation-popup user-navigation-popup-basket">
+                    <table class="user-navigation-popup-table">
                       <tr>
                         <td><img src="img/cross.svg" width="11" height="11" alt="Отмена"></td>
                         <td class="td-column-2"><img src="img/ice/ice1.png" width="33" height="33" alt="Мороженое"></td>
@@ -108,7 +112,7 @@
                       </tr>
                     </table>
                     <p>Итого: 750 руб.</p>
-                    <button class="popup-form--button-basket button" type="button">Оформить заказ</button>
+                    <button class="popup-form-button-basket button" type="button">Оформить заказ</button>
                   </div>
                 </li>
               </ul>
@@ -136,7 +140,7 @@
            <div class="sorting-price-content">
               <fieldset class="sorting"> <!--Список сортировки-->
                 <legend>Сортировка</legend>
-                <select class="sorting-list select--right" name="theme">
+                <select class="sorting-list select-right" name="theme">
                   <option selected value="popularity">по популярности</option>
                   <option value="not-expensive">сначала недорогие</option>
                   <option value="expensive">сначала дорогие</option>
@@ -166,19 +170,19 @@
               <fieldset class="content"> <!--Жирность-->
                 <legend>Жирность</legend>
                 <ul class="content-list">
-                  <li class="content-list--item">
+                  <li class="content-list-item">
                     <input class="visually-hidden filter-input-radio" type="radio" name="fat" value="0%" id="0">
                     <label for="0">0%</label>
                   </li>
-                  <li class="content-list--item">
+                  <li class="content-list-item">
                     <input class="visually-hidden filter-input-radio" type="radio" name="fat" value="10%" id="10" checked>
                     <label for="10">до 10%</label>
                   </li>
-                  <li class="content-list--item">
+                  <li class="content-list-item">
                     <input class="visually-hidden filter-input-radio" type="radio" name="fat" value="30%" id="30">
                     <label for="30">до 30%</label>
                   </li>
-                  <li class="content-list--item">
+                  <li class="content-list-item">
                     <input class="visually-hidden filter-input-radio" type="radio" name="fat" value="above-30%" id="above-30">
                     <label for="above-30">выше 30%</label>
                   </li>
@@ -189,23 +193,23 @@
               <fieldset class="filler"> <!--Наполнители-->
                 <legend>Наполнители</legend>
                 <ul class="filler-list">
-                  <li class="filler-list--item">
+                  <li class="filler-list-item">
                     <input class="visually-hidden filler-input-checkbox" type="checkbox" name="chocolate" id="chocolate" checked>
                     <label for="chocolate">шоколадные</label>
                   </li>
-                  <li class="filler-list--item">
+                  <li class="filler-list-item">
                     <input class="visually-hidden filler-input-checkbox" type="checkbox" name="powdered-sugar" id="powdered-sugar" checked>
                     <label for="powdered-sugar">сахарные присыпки</label>
                   </li>
-                  <li class="filler-list--item">
+                  <li class="filler-list-item">
                     <input class="visually-hidden filler-input-checkbox" type="checkbox" name="fruits" id="fruits">
                     <label for="fruits">фрукты</label>
                   </li>
-                  <li class="filler-list--item">
+                  <li class="filler-list-item">
                     <input class="visually-hidden filler-input-checkbox" type="checkbox" name="syrups" id="syrups">
                     <label for="syrups">сиропы</label>
                   </li>
-                  <li class="filler-list--item">
+                  <li class="filler-list-item">
                     <input class="visually-hidden filler-input-checkbox" type="checkbox" name="jams" id="jams">
                     <label for="jams">джемы</label>
                   </li>
@@ -319,25 +323,25 @@
       <section> <!--список страниц для перехода-->
         <ul class="number-list">
           <li>
-            <a class="number-list--number" href="#">&#60;</a>
+            <a class="number-list-number" href="#">&#60;</a>
           </li>
           <li>
-            <a class="number-list--active">1</a>
+            <a class="number-list-active">1</a>
           </li>
           <li>
-            <a class="number-list--number" href="#">2</a>
+            <a class="number-list-number" href="#">2</a>
           </li>
           <li>
-            <a class="number-list--number" href="#">3</a>
+            <a class="number-list-number" href="#">3</a>
           </li>
           <li>
-            <a class="number-list--number" href="#">4</a>
+            <a class="number-list-number" href="#">4</a>
           </li>
           <li>
-            <a class="number-list--number" href="#">5</a>
+            <a class="number-list-number" href="#">5</a>
           </li>
           <li>
-            <a class="number-list--number" href="#">&#62;</a>
+            <a class="number-list-number" href="#">&#62;</a>
           </li>
         </ul>
       </section>
@@ -345,7 +349,7 @@
     <footer class="main-footer container"> <!--Подвал-->
       <section class="footer-social">
         <ul>
-          <li class="footer-social--link">
+          <li class="footer-social-link">
             <a href="#"><!--Фейсбук-->
               <!--<svg width="19" height="22" viewBox="0 0 10.15 21.74"><path d="M3.34 1.12A4.77 4.77 0 0 1 6.53 0h3.61v3.81H7.81a1.07 1.07 0 0 0-1.09.83v2.55h3.42c-.08 1.23-.24 2.45-.41 3.67h-3v10.87H2.21V10.86H0V7.21h2.19V3.66a3.83 3.83 0 0 1 1.15-2.54z" fill="#fff"/></svg>-->
               <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
@@ -354,7 +358,7 @@
               </svg>
             </a>
           </li>
-          <li class="footer-social--link">
+          <li class="footer-social-link">
             <a href="#"><!--ВКонтакте-->
               <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
                 <path d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" stroke-opacity="0.5" stroke-width="2"/>
@@ -364,7 +368,7 @@
               </svg>
             </a>
           </li>
-          <li class="footer-social--link">
+          <li class="footer-social-link">
             <a href="#"><!--Инстаграм-->
               <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
                 <path d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" stroke-opacity="0.5" stroke-width="2"/>
@@ -377,7 +381,7 @@
               </svg>
             </a>
           </li>
-          <li class="footer-social--link">
+          <li class="footer-social-link">
             <a href="#"><!--Твитер-->
               <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
                 <path d="M18 35C27.3888 35 35 27.3888 35 18C35 8.61116 27.3888 1 18 1C8.61116 1 1 8.61116 1 18C1 27.3888 8.61116 35 18 35Z" stroke="white" stroke-opacity="0.5" stroke-width="2"/>
@@ -390,7 +394,7 @@
       <section class="footer-contacts"> <!--контактная информация для пользователей-->
         <ul class="footer-contacts-list">
           <li class="footer-suppliers">
-            <a class="footer-contacts-list-link footer-contacts-list-link--svg" href="blank.html">
+            <a class="footer-contacts-list-link footer-contacts-list-link-svg" href="blank.html">
               <svg width="15" height="13" viewBox="0 0 15 13" fill="none">
                 <path d="M10.8 0.00081161C10.1584 1.47209e-05 9.52561 0.149795 8.95246 0.438107C8.37931 0.726419 7.88182 1.14521 7.5 1.66081C7.11818 1.14521 6.62069 0.726419 6.04754 0.438107C5.47439 0.149795 4.84158 1.47209e-05 4.2 0.00081161C3.11401 -0.0207343 2.06346 0.387449 1.2769 1.13655C0.490337 1.88566 0.0314232 2.91507 0 4.00081C0 7.18081 7.5 13.0008 7.5 13.0008C7.5 13.0008 15 7.22081 15 4.00081C14.9686 2.91507 14.5097 1.88566 13.7231 1.13655C12.9365 0.387449 11.886 -0.0207343 10.8 0.00081161Z" fill="white"/>
               </svg>
