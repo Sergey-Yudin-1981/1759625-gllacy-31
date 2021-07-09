@@ -7,7 +7,7 @@
   --basic-white: #FFFFFF;
   --basic-neutral: #5A5A5A;
   --basic-dark: #696969; /*темно-серый*/
-  --basic-darl-lite: #ababab; /*светло-серый*/
+  --basic-darl-lite: #ABABAB; /*#ababab; /*светло-серый*/
   --basic-green-lite: rgba(255, 255, 255, 0.2); /*светло-зеленый в основном цвет фона кнопок*/
   --brown-lite: #D07058; /*светло-коричневый*/
   --basic-blu-lite: #8996A6;
@@ -18,7 +18,6 @@
 /* Global */
 
 body {
-  /*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');*/ /*подключениме шрифта 2-ой вариант*/
   min-width: 1200px;
   margin: 0;
   padding: 0;
@@ -27,12 +26,9 @@ body {
   line-height: 22px;
   font-weight: 700;
   color: var(--basic-white);
-  /*text-transform: uppercase;*/
   background-color: var(--basic-green);
-  /*background-image: url("img/bg.jpg");*/
   background-position: top center;
   background-repeat: no-repeat;
-
   min-height: 100%; /*займи все пространство*/
   display: grid; /*включение контекста grid*/
   grid-template-rows: min-content 1fr min-content; /*правила расположения строк*/
@@ -48,7 +44,7 @@ h2 {
   margin: 0;
   font-size: 35px;
   line-height: 41px;
-  padding: 16px 16px;
+  padding: 15px 16px 17px;
 }
 h3 {
   margin-top: 0;
@@ -57,7 +53,7 @@ h3 {
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-black-text);
-  padding: 24px 20px 0px 20px;
+  padding: 26px 20px 0px 20px;
 }
 span {
   font-size: 30px;
@@ -87,9 +83,10 @@ fieldset {
   padding-right: 27px;
   margin-left: auto;
   margin-right: auto;
-  /*outline: 1px solid black; /*обводка*/
 }
-
+.container-heading {
+  margin-top: -7px;
+}
 .slider{
   position: relative; /*элемент с относительным позиционированием*/
   padding-top: 275px;
@@ -111,7 +108,8 @@ fieldset {
 .slide-title {
   width: 700px;
   padding: 0;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
+  margin-left: 181px;
   margin-bottom: 27px;
   font-size: 60px;
   line-height: 60px;
@@ -119,17 +117,17 @@ fieldset {
 }
 .slider-controls {
   position: absolute;
-  bottom: 63px;
+  bottom: 25px;
   left: 0;
-  z-index: 20;
+  z-index: 4;
   display: flex;
-  width: 67px;
+  width: 79px;
   justify-content: space-between;
 }
 .slider-controls button {
   padding: 0;
-  width: 17px;
-  height: 17px;
+  width: 21px;
+  height: 21px;
   background-color: transparent;
   border: 2px solid var(--basic-white);
   border-radius: 50%;
@@ -143,7 +141,6 @@ fieldset {
 }
 .page-body {
   min-width: 1200px;
-
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -177,19 +174,14 @@ fieldset {
 .main-navigation {
   font-size: 16px;
   line-height: 18px;
-
-  /*outline: 1px solid red; /*обводка*/
   outline-offset: -5px;
 }
 
 .main-navigation-wrapper {
-  /*display: grid; /*включаем гриды*/
   margin: 0;
   display: flex;
   align-items: center;
   width: 850px;
-
-  /*outline: 1px solid rgba(0, 255, 255, 0.3); /*обводка*/
   outline-offset: -5px;
 }
 
@@ -197,8 +189,6 @@ fieldset {
   margin: 0;
   padding: 0;
   width: 300px;
-
-  /*outline: 1px solid yellow; /*обводка*/
   outline-offset: -5px;
 }
 .information-crumbs {
@@ -212,8 +202,6 @@ fieldset {
   text-align: right;
   order: 3;
   margin-left: auto;
-
-  /*outline: 1px solid blue; /*обводка*/
   outline-offset: -5px;
 }
 
@@ -223,13 +211,11 @@ fieldset {
   margin-bottom: 40px; /*отступ до следующего блока*/
   height: 229px;
   margin-top: 41px;
-
 }
 
 /*меню главное*/
 .site-navigation {
   position: relative;
-
   margin: 0;
   padding: 0;
   display: flex;
@@ -246,12 +232,13 @@ fieldset {
 .main-header-logo { /*не совсем понял нужно или нет это прописывать в css*/
   margin: 0;
   padding: 0;
+  padding-top: 3px;
   width: 154px;
   height: 64px;
 }
 .catalog-list-menu {
   text-decoration: none; /*убираем подчеркивание у ссылок*/
-  border-bottom: 1px solid var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  border-bottom: 1px solid var(--basic-green-lite); /*цвет подчеркивания*/
 }
 /*цвет ссылки меню и ссылки входа*/
 .catalog-list-menu,
@@ -266,6 +253,7 @@ fieldset {
 .crumbs {
   padding: 0;
   margin: 0;
+  padding-bottom: 9px;
   display: flex;
   flex-wrap: wrap; /*перенос на новую сроку если дошел до предела области*/
   justify-content: flex-start;
@@ -298,24 +286,21 @@ fieldset {
 .crumbs a{
   color: var(--basic-white);
   text-decoration: none; /*убираем подчеркивание у ссылок*/
-  border-bottom:1px solid var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  border-bottom:1px solid var(--basic-green-lite); /*цвет подчеркивания*/
 }
 /*конец хлебные крошки*/
 
 /*меню каталог с catalog.html*/
 .mark .catalog-list-menu {
-  background: var(--brown-lite);/* #D07058;*/
-  padding: 9px 13px; /* Поля вокруг текста */
+  background: var(--brown-lite);
+  padding: 8px 14px; /* Поля вокруг текста */
   margin: -13px;
-
-  margin-right: 19px;
-
+  margin-right: 17px;
   border-radius: 26px;
   text-decoration: none;
 }
 .site-navigation-sub {
   padding: 0;
-  /*padding: 6px 9px 6px 6px;*/
   list-style: none;
   visibility: hidden;
   position: absolute;
@@ -408,10 +393,12 @@ fieldset {
   align-items: center;
 }
 .user-navigation-link-action svg {
-  margin-right: 10px;
+  margin-right: 8px;
+  margin-top: -5px;
 }
 .user-navigation-item {
   position: relative;
+  font-weight: 500;
 }
 .user-navigation-popup {
   display: block;
@@ -425,22 +412,18 @@ fieldset {
   border-radius: 4px;
   right: 0;
   top: 36px;
-  padding: 10px;
+  /*padding: 10px;*/
 }
 .user-navigation-item:hover .user-navigation-popup {
-  /* display: block; */
   visibility: visible;
   opacity: 1;
 }
 .user-navigation-popup-search {
-  /*padding: 12px;*/
   width: 321px;
   height: 64px;
+  padding: 10px;
 }
-/*.popup-form-search {
-  background: #F8F7F4;
-  border-radius: 4px;
-}*/
+
 .popup-form-search input {
   padding-left: 15px;
   width: 292px;
@@ -476,11 +459,13 @@ fieldset {
 .user-navigation-popup-link {
   width: 277px;
   height: 194px;
+  padding: 10px;
 }
 .popup-form-link input {
   padding-left: 15px;
   width: 241px;
   height: 44px;
+  font-family: 'Roboto';
   margin: 10px 7px 10px 9px;
   border: 1px solid #D3D3D2;
   border-radius: 4px;
@@ -518,6 +503,7 @@ fieldset {
 .popup-form-link button {
   border: none;
   box-shadow: none;
+  padding: 9px 23px;
 }
 .popup-form-link-help {
   display: flex;
@@ -538,10 +524,14 @@ fieldset {
 .user-navigation-popup-basket {
   width: 519px;
   height: 222px;
+  padding-top: 8px;
+  padding-left: 19px;
+  padding-right: 2px;
+  padding-bottom: 11px;
 }
 .popup-form-button-basket {
-  padding: 13px 15px;
-  margin-left: 322px;
+  padding: 11px 15px;
+  margin-left: 336px;
   border: none;
   box-shadow: 0px 1px 2px rgba(172, 16, 0, 0.25);
   background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
@@ -553,15 +543,14 @@ fieldset {
   display: inline-block;
   font-weight: 700;
   color: var(--basic-white);
+
 }
 .user-navigation-popup-table {
   color: var(--basic-black-text);
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
-  /*margin-top: 10px;*/
-  /*margin-left: 11px;*/
-  padding-left: 11px;
+  /*padding-left: 11px;*/
   border-bottom: 1px solid var(--basic-dark-lite-lite);
 }
 .user-navigation-popup-table span {
@@ -571,43 +560,45 @@ fieldset {
   color: var(--basic-dark-lite-lite);
 }
 .td-column-2 {
-  padding-left: 9px;
-  padding-right: 13px;
-  height: 57px;
+  padding-left: 6px;
+  padding-right: 11px;
+  height: 50px;
 }
 .td-column-3 {
   width: 216px;
 }
 .td-column-4 {
-  padding-left: 5px;
+  padding-left: 3px;
   width: 121px;
   text-align: right;
 }
 .td-column-5 {
-  padding-left: 5px;
+  padding-left: 1px;
   width: 71px;
   text-align: right;
+}
+.td-end-line {
+  padding-bottom: 8px;
 }
 .user-navigation-popup-basket p {
   color: var(--basic-black-text);
   font-size: 15px;
   text-align: right;
-  margin-right: 4px;
+  margin-right: 12px;
   margin-top: 16px;
 }
 
 .user-navigation-link-basket:hover .user-navigation-popup-basket{
   display: block;
-  /*position: absolute;*/
 }
 /*цвет меню при наведении*/
 .catalog-list-menu:hover {
   margin: 0;
   color: var(--basic-black-text);
   background-color: var(--basic-white);
-  padding: 9px 13px; /* Поля вокруг текста */
+  padding: 8px 14px; /* Поля вокруг текста */
   margin-left: -13px;
-  margin-right: 19px;
+  margin-right: 17px;
   border-radius: 26px;
   text-decoration: none;
 }
@@ -615,7 +606,7 @@ fieldset {
   color: var(--basic-black-text);
   background-color: #EDEDED;;
   box-shadow: inset 0px 2px 1px #696969;/*0px -3px 0px var(--basic-dark);/*rgba(172, 16, 0, 0.64); /*тень кнопки*/
-  padding: 9px 13px; /* Поля вокруг текста */
+  padding: 8px 14px; /* Поля вокруг текста */
   border-radius: 26px;
   text-decoration: none;
 }
@@ -669,18 +660,30 @@ fieldset {
 .button /*.button*/ {
   background: linear-gradient(180deg, #F26843 0%, #E74A35 100%); /*градиентная заливка*/
   text-align: right;
+  font-family: 'Roboto';
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76); /*тень текста*/
   box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64); /*тень кнопки*/
-  padding: 9px 23px; /* Поля вокруг текста */
+  /*padding: 9px 23px; /* Поля вокруг текста */
   border-radius: 70px; /*скругление углов*/
   text-decoration: none;
   display: inline-block;
 }
+.raspberries-chocolate-button {
+  padding: 11px 21px;
+}
+.contacts-form-button {
+  padding: 10px 27px;
+  margin-left: 2px;
+}
 .slide-button {
   font-size: 32px;
   line-height: 44px;
+  padding: 9px 22px;
+  margin-left: -56px;
+  letter-spacing: 2px;
 }
 .button:hover { /*цвет кнопки при наведении*/
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
@@ -696,7 +699,7 @@ fieldset {
 .sorting-price-content {
   width: 869px;
   display: flex;
-  margin-bottom: 14px;
+  margin-bottom: 9px;
 }
 /*----*/
 .sorting {
@@ -708,15 +711,17 @@ fieldset {
   line-height: 16px;
 }
 .sorting legend {
-  padding-left: 14px;
+  padding-left: 17px;
   margin-bottom: 7px;
 }
 .sorting-list {
-  appearance: none !important;
+  appearance: none;
   display: flex;
   color: var(--basic-white);
   background: var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*заливка*/
   border-radius: 20px; /*скругление углов*/
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   height: 36px;
@@ -732,7 +737,6 @@ fieldset {
   padding-right: 30px;
 }
 .sorting-list:hover {
-  /*background: var(--basic-white);*/
   color: var(--basic-black-text);
   font-weight: 500;
   background-image: url("../img/arrow-black.svg");
@@ -763,11 +767,19 @@ fieldset {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-
+}
+.price-label1 {
+  padding-left: 17px;
+}
+.price-label2 {
+  padding-left: 1px;
 }
 .price input {
-  width: 35px;
+  width: 22px;
   height: 11px;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: 'Roboto';
   border: none;
   background: none;
   color: var(--basic-white);
@@ -780,15 +792,10 @@ fieldset {
 .range-controls {
     position:relative;
     margin-top: 7px;
-    /*position: absolute;*/
     width: 218px;
-    /*height: 36px;*/
-    /*overflow:hidden;*/ /*обрезание что выходит за границы*/
     padding-top: 17px;
     padding-bottom: 17px;
-    /*margin-bottom:15px;*/
-    /*padding:0 30px;*/
-    background: var(--basic-green-lite);/*rgba(255, 255, 255, 0.2); /*цвет фона*/
+    background: var(--basic-green-lite); /*цвет фона*/
     border-radius:20px;
 }
 /*----*/
@@ -805,10 +812,12 @@ fieldset {
   color: var(--basic-white);
   box-sizing: border-box;
   border-radius: 20px; /*скругление углов*/
+  font-family: "Roboto", Arial, sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  padding: 9px 29px; /* Поля вокруг текста */
+  padding: 8px 28px; /* Поля вокруг текста */
+  margin-bottom: 1px;
   text-decoration: none;
 }
 
@@ -821,9 +830,9 @@ fieldset {
 }
 .raspberries a { /*кнопка расположение ее на блоке*/
   display: block;
-  margin-left: 368px;
-  margin-right: 22px;
-  margin-top: 42px;
+  margin-left: 373px;
+  margin-right: 25px;
+  margin-top: 44px;
 }
 
 .chocolate {
@@ -834,9 +843,9 @@ fieldset {
 }
 .chocolate a { /*кнопка расположение ее на блоке*/
   display: block;
-  margin-left: 339px;
-  margin-right: 22px;
-  margin-top: 42px;
+  margin-left: 347px;
+  margin-right: 24px;
+  margin-top: 44px;
 }
 
 .banner {
@@ -846,7 +855,9 @@ fieldset {
   font-size: 18px;
 }
 /*хиты продаж*/
-
+.hit-button {
+  margin-bottom: 38px;
+}
 .hit-list {
   margin: 0;
   padding: 0;
@@ -854,10 +865,6 @@ fieldset {
   list-style: none;
   display: grid; /*включаем гриды*/
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  /*margin-bottom: 40px;
-  /*width: 267px;*/
-  /*border: 1px solid red; /*обводка*/
-
 }
 .catalog-item { /*без этого класса не мог выранить картинку, не выстраивались гриды*/
   margin: 0;
@@ -865,7 +872,7 @@ fieldset {
   width: 267px; /*ширина занимаемой области товара*/
   min-height: 324px; /*мин высота если вдруг картинки не будет*/
   margin-right: 26px; /*расстояние между карточками товаров*/
-  margin-bottom: 40px; /*отступ вниз между карточкамит товаров*/
+  margin-bottom: 35px; /*отступ вниз между карточкамит товаров*/
   position: relative;
 }
 .catalog-item::before {
@@ -893,18 +900,11 @@ fieldset {
   display: none;
   position: absolute;
   bottom: -58px;
-  /*height: 33px;*/
   left: 20px;
 }
 .catalog-item:hover .button {
   display: block;
 }
-/* .catalog-item:hover {
-  background-color: #FFFFFF;
-  /*opacity: 0.2;
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-} */
 .catalog-item img {
   position: relative;
   z-index: 2;
@@ -913,7 +913,7 @@ fieldset {
   padding: 0;
   margin: 0;
   margin-top: -65px;
-  margin-bottom: 33px;
+  margin-bottom: 26px;
   font-size: 45px;
   line-height: 45px;
   text-align: left;
@@ -937,13 +937,12 @@ fieldset {
 /*качество продукции*/
 .quality {
   padding: 0;
-  margin: 0;
+  margin-top: 1px;
 
   min-height: 306px;
   background-image: url("../img/pattern2.jpg");
   border-radius: 16px;
-  margin-bottom: 40px;
-  /*padding: 0px 27px;*/
+  margin-bottom: 42px;
 }
 .quality-list {
   margin: 0;
@@ -969,7 +968,7 @@ fieldset {
   width: 49px;
 }
 .quality-item p {
-  margin-left: 6px;
+  margin-left: 7px;
   margin-top: 7px;
   width: 485px;
   margin-bottom: 0;
@@ -994,8 +993,8 @@ fieldset {
 .news p {
   margin: 0;
   padding-left: 20px;
-  padding-top: 23px;
-  /*padding-bottom: 15px;*/
+  padding-top: 18px;
+  padding-bottom: 4px;
   font-weight: 500;
   color: var(--basic-black-text);
 }
@@ -1005,8 +1004,6 @@ fieldset {
   display: block;
   padding-left: 20px;
   padding-right: 253px;
-  /*height: 77px;*/
-  /*width: 287px;*/
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -1027,9 +1024,9 @@ fieldset {
 .mail p {
   margin: 0;
   padding-left: 26px;
-  padding-top: 34px;
+  padding-top: 29px;
   padding-right: 22px;
-  padding-bottom: 47px;
+  padding-bottom: 42px;
   font-weight: 400;
   color: var(--basic-neutral);
 }
@@ -1044,6 +1041,7 @@ fieldset {
   border-width: 1px;
   border-style: double;
   padding-left: 14px;
+  font-family: 'Roboto';
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -1066,16 +1064,9 @@ fieldset {
   outline: 0; /*уюирает браузерную обводку*/
 }
 .mail button {
-  /*background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
-  padding: 9px 23px;*/
   border-width: 0;
   cursor: pointer;
-  /*font-size: 18px;
-  line-height: 24px;
-  border-radius: 70px;
-  color: var(--basic-white);
-  text-decoration: none;*/
+  padding: 9px 20px;
 }
 /*конец отправка сообщения*/
 
@@ -1092,7 +1083,7 @@ fieldset {
 }
 .bar{ /*шкала между бегунками*/
     height:2px;
-    background: var(--basic-white); /*#F8F7F4; /*#00ca74;*/
+    background: var(--basic-white);
     margin-left:50px;
     margin: 28px;
     width:106px;
@@ -1125,23 +1116,18 @@ fieldset {
 }
 
 .content-list {
-  /*padding: 0;*/
   margin: 0;
   background: var(--basic-green-lite);
   padding: 9px 14px;
   border-radius: 20px;
   display: flex;
-  /*width: 360px;*/
   list-style: none; /*убираем обозначанеи списка*/
 }
 .content legend {
-  padding-left: 14px;
+  padding-left: 17px;
   margin-bottom: 7px;
 }
 .content-list-item {
-  /*display: flex;
-  align-items: center;*/
-
   padding-left: 33px;
   margin-right: 19px;
   position: relative;
@@ -1163,10 +1149,10 @@ fieldset {
 .filter-input-radio + label::before {
   content: "";
   position: absolute;
-  left: -35px;
+  left: -33px;
   top: -4px;
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   border: 4px solid rgba(255, 255, 255, 0.8); /*var(--basic-white);*/
   border-radius: 50%;
 }
@@ -1176,10 +1162,10 @@ fieldset {
 .filter-input-radio:checked + label::after {
   content: "";
   position: absolute;
-  left: -28px;
+  left: -26px;
   top: 3px;
-  width: 12px;
-  height: 12px;
+  width: 9px;
+  height: 9px;
   background-color: rgba(255, 255, 255, 0.8); /*var(--basic-white);*/
   border-radius: 50%;
 }
@@ -1191,15 +1177,15 @@ fieldset {
   margin: 0;
 }
 .filler legend {
-  margin-bottom: 11px;
-  padding-left: 14px;
+  margin-bottom: 4px;
+  padding-left: 17px;
   font-size: 14px;
 }
 .filler-list {
   list-style: none; /*убираем обозначанеи списка*/
   display: flex;
   margin: 0;
-  margin-right: 14px;
+  margin-right: 18px;
   padding: 13px 19px 10px;
   font-weight: 500;
   line-height: 18px;
@@ -1207,8 +1193,8 @@ fieldset {
   border-radius: 20px;
 }
 .filler-list-item {
-  padding-left: 34px;
-  margin-right: 19px;
+  padding-left: 29px;
+  margin-right: 26px;
   position: relative;
 }
 .filler-list-item:last-child {
@@ -1224,7 +1210,7 @@ fieldset {
   content: "";
   position: absolute;
   top: -2px;
-  left: -30px;
+  left: -32px;
   width: 24px;
   height: 20px;
   background-image: url("../img/cube.svg");
@@ -1252,19 +1238,25 @@ fieldset {
   margin-right: auto;
   background-color: #FEFEFE;
   color: var(--basic-black-text);
+  margin-bottom: 2px;
 }
 .contacts-form {
   position: absolute;
-  top: 35px;
-  right: 27px;
+  top: 63px;
+  right: 30px;
   /*position: relative;
   top: -400px;
   left: 870px;*/
   /* bottom: 65px; */
   /*right: 27px;*/
   background-color: #FEFEFE;
-  width: 253px;
-  padding: 31px 25px;
+  width: 276px;
+  /*padding: 31px 25px;*/
+  padding-top: 27px;
+  padding-left: 23px;
+  padding-bottom: 29px;
+  border-radius: 16px;
+
   border-radius: 16px;
 }
 .contacts-text {
@@ -1275,7 +1267,7 @@ fieldset {
 }
 .contacts-text-days {
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 26px;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -1283,12 +1275,12 @@ fieldset {
 .contacts-text-bold {
   font-size: 18px;
   line-height: 24px;
-  margin: 8px 0px 30px;
+  margin: 0px 0px 23px;
 }
 .contacts-text-bold-tel {
   font-size: 18px;
   line-height: 24px;
-  margin: 11px 0px 8px;
+  margin: 2px 0px 1px;
 }
 .contacts-text-bold-tel a {
   color: var(--basic-black-text);
@@ -1322,10 +1314,10 @@ fieldset {
   /* padding: 24px 20px 0px 20px;*/
 }
 .login-form input {
-    /*margin: 0;*/
     padding: 0;
     width: 251px;
     height: 42px;
+    font-family: 'Roboto';
     border-radius: 4px;
     border-width: 1px;
     border-style: double;
@@ -1337,22 +1329,31 @@ fieldset {
     border-color: rgba(178, 178, 178, 0.52);
 }
 .modal {
-  display: none; /*скроем модальное окно отправки*/
+  /*display: none; /*скроем модальное окно отправки*/
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, .35);
-  /*display: flex;*/
-  align-items: center;
+
+  display: flex;
+
+  /*align-items: center;*/
   justify-content: center;
+  z-index: 5;
 }
 .modal-body {
-  display: none; /*скроем модальное окно отправки*/
-  /* position: absolute;
-  top: 338px; */
-  position: relative;
+  /*display: none; /*скроем модальное окно отправки*/
+
+  /*position: absolute;*/
+  position: fixed;
+  /*top: 338px;*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  /*position: relative;*/
   bottom: auto;
   width: 428px;
   padding: 20px 25px 27px;
@@ -1369,12 +1370,8 @@ fieldset {
   height: 154px;
   resize: none; /*Не дает возможность изменять размеры области ввода текста*/
   padding: 16px 14px;
-  /*padding-left: 14px;*/
   font-family: "Roboto", Arial, sans-serif;
-  /*color: #999999;*/
   font-size: 16px;
-  /*line-height: 20px;*/
-  /*background: var(--basic-white);*/
   border: 1px solid rgba(178, 178, 178, 0.52);
   box-sizing: border-box;
   border-radius: 4px;
@@ -1406,6 +1403,7 @@ fieldset {
 .modal-close::after {
   transform: rotate(-45deg); /*поворот палочек на -45 градусов*/
 }
+
 .login-icon-user:hover {
   width: 249px;
   height: 40px;
@@ -1442,7 +1440,7 @@ fieldset {
   justify-content: space-between;
   width: 194px;
   height: 26px;
-
+  margin-bottom: 36px;
 }
 .number-list-number {
   text-decoration: none; /*убираем подчеркивание у ссылок*/
@@ -1468,21 +1466,20 @@ fieldset {
 }
 /*подвал*/
 .main-footer {
-  /*display: grid;
-  grid-template-columns: 1fr 1fr 1fr;*/
-  /*делаем на флексах*/
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
+.footer-social {
+  padding-top: 30px;
+}
 .footer-social ul {
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 164px;
+  width: 169px;
   list-style: none; /*убираем обозначанеи списка*/
 }
 .footer-social-link:hover path {
@@ -1494,30 +1491,32 @@ fieldset {
 .footer-contacts {
   padding: 0;
   margin: 0;
-  width: 327px;
+  padding-top: 28px;
+  width: 330px;
   text-align: center;
-  /*outline: 1px solid red; /*обводка*/
 }
 .footer-ico {
   margin: 0;
   padding: 0;
+  margin-top: -2px;
   width: 190px;
   text-align: left;
+}
+.footer-ico p {
+  margin-bottom: -6px;
 }
 .footer-contacts-list {
   padding: 0;
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr; /*правила расположения строк*/
-
   list-style: none; /*убираем обозначанеи списка*/
   color: var(--basic-white);
 }
 .footer-contacts-list-link {
   color: var(--basic-white);
   text-decoration: none; /*убираем подчеркивание у ссылок*/
-  border-bottom:1px solid var(--basic-green-lite);/*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
-  /*font-family: Roboto;*/
+  border-bottom:1px solid var(--basic-green-lite); /*цвет подчеркивания*/
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -1541,6 +1540,7 @@ fieldset {
 
 .footer-suppliers {
   text-align: left;
+  padding-left: 2px;
 }
 .footer-copyright {
   font-weight: 400;
@@ -1550,7 +1550,7 @@ fieldset {
 .footer-copyright a {
   color: var(--basic-white);
   text-decoration: none; /*убираем подчеркивание у ссылок*/
-  border-bottom:1px solid var(--basic-green-lite);/*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  border-bottom:1px solid var(--basic-green-lite); /*цвет подчеркивания*/
 }
 /*конец подвал*/
 .blank-main {

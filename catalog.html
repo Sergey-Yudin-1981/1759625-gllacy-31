@@ -12,9 +12,7 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
-  <!--<div class="page-body page-body-1">-->
     <header class="main-header"> <!--Шапка сайта-->
-      <!--<p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p> -->
       <div class="container">
         <nav class="main-navigation">
           <div class="main-menu">
@@ -75,7 +73,7 @@
                         <label class="visually-hidden" for="login-password">Пароль</label>
                         <input class="popup-form-link-input" id="login-password" type="password" name="name" placeholder="password">
                         <div class="popup-form-link-enter">
-                          <button class="popup-form-link-button button" type="button">Войти</button>
+                          <button class="popup-form-link-button button" type="submit">Войти</button>
                           <div class="popup-form-link-help">
                             <a href="#">Забыли пароль?</a>
                             <a href="#">Новая регистрация</a>
@@ -110,9 +108,12 @@
                         <td class="td-column-4">1,5 кг х <span>300 руб.</span></td>
                         <td class="td-column-5">450 руб.</td>
                       </tr>
+                      <tr>
+                        <td class="td-end-line"></td>
+                      </tr>
                     </table>
                     <p>Итого: 750 руб.</p>
-                    <button class="popup-form-button-basket button" type="button">Оформить заказ</button>
+                    <button class="button popup-form-button-basket" type="button">Оформить заказ</button>
                   </div>
                 </li>
               </ul>
@@ -133,7 +134,7 @@
       </div>
     </header>
     <main class="container">
-      <h1>Сливочное мороженое</h1>
+      <h1 class="container-heading">Сливочное мороженое</h1>
       <section class="filtr"> <!--Фильтры, отборы-->
         <h2 class="visually-hidden">Фильтр товаров</h2>
          <form action="http://echo.htmlacademy.html" method="get">
@@ -148,12 +149,12 @@
                 </select>
               </fieldset>
               <fieldset class="price"> <!--Цена-->
-                <label>
+                <label class="price-label1">
                   Цена:
                   <input type="text" value="100">
                   ₽
                 </label>
-                <label>
+                <label class="price-label2">
                   -
                   <input type="text" value="500">
                   ₽
@@ -219,7 +220,7 @@
             </div>
           </form>
       </section>
-      <section class="hit"> <!--Перечень товаров-->
+      <section class="hit hit-button"> <!--Перечень товаров-->
         <h2 class="visually-hidden">Список мороженого</h2>
         <ul class="hit-list">
           <li class="catalog-item">
@@ -401,10 +402,10 @@
             Для поставщиков</a>
           </li>
           <li class="footer-suppliers">
-            <a class="footer-contacts-list-link" href="blank.html">О производстве</a>
+            <a class="footer-contacts-list-link" href="blank.html">Наши документы</a>
           </li>
           <li class="footer-suppliers">
-            <a class="footer-contacts-list-link" href="blank.html">Наши документы</a>
+            <a class="footer-contacts-list-link" href="blank.html">О производстве</a>
           </li>
           <li class="footer-suppliers">
             <a class="footer-contacts-list-link" href="blank.html">Экологические стандарты</a>
@@ -412,8 +413,8 @@
         </ul>
       </section>
       <section class="footer-ico"> <!--Сделано-->
-        <p><a href="https://htmlacademy.ru/"><img src="img/html-academy.svg" width="108" height="31" alt=""></a></p>
-        <p class="footer-copyright">Сделано <a href="https://htmlacademy.ru/">в HTML Academy</a> © 2021</p>
+        <p><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/html-academy.svg" width="108" height="31" alt=""></a></p>
+        <p class="footer-copyright">Сделано <a href="https://htmlacademy.ru/intensive/htmlcss">в HTML Academy</a> © 2021</p>
       </section>
     </footer>
   <!--</div>-->
