@@ -2,7 +2,6 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
-  <!--<link rel="preconnect" href="https://fonts.gstatic.com">-->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">
   <title>Магазин мороженого "GllacyShop"</title>
@@ -14,7 +13,6 @@
 <body>
   <div  class="page-body page-body-1">
     <header class="main-header"> <!--шапка-->
-      <!--<p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p> -->
       <div class="container">
         <nav class="main-navigation"> <!--меню навигации-->
           <div class="main-menu">
@@ -26,7 +24,7 @@
                 <li class="site-navigation-link">
                   <a class="site-navigation-li catalog-list-menu" href="catalog.html">Каталог</a>
                   <ul class="site-navigation-sub">
-                    <li class="site-navigation-link-VIP"><a href="">Новинки</a></li>
+                    <li class="site-navigation-link-VIP"><a class="site-navigation-link-VIP-one" href="">Новинки</a></li>
                     <li class="site-navigation-link-element"><a href="catalog.html">Сливочное</a></li>
                     <li class="site-navigation-link-element"><a href="">Щербеты</a></li>
                     <li class="site-navigation-link-element"><a href="">Фруктовый лед</a></li>
@@ -71,7 +69,7 @@
                         <label class="visually-hidden" for="login-password">Пароль</label>
                         <input class="popup-form-link-input" id="login-password" type="password" name="name" placeholder="password">
                         <div class="popup-form-link-enter">
-                          <button class="popup-form-link-button button" type="button">Войти</button>
+                          <button class="popup-form-link-button button" type="submit">Войти</button>
                           <div class="popup-form-link-help">
                             <a href="#">Забыли пароль?</a>
                             <a href="#">Новая регистрация</a>
@@ -80,13 +78,14 @@
                     </form>
                   </div>
                 </li>
-                <li><a class="user-navigation-link user-navigation-link-action" href="blank.html">
+                <li class="user-navigation-item">
+                  <a class="user-navigation-link user-navigation-link-action" href="blank.html">
                       <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
                         <path d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z" fill="white"/>
                         <path d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="white"/>
                         <path d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" fill="white"/>
                       </svg>
-                    Корзина</a>
+                    Пуста</a>
                 </li>
               </ul>
             </div>
@@ -136,13 +135,11 @@
         </section>
         <div class="raspberries-chocolate"> <!--Банеры малина и шоколад-->
           <section class="raspberries"> <!-- Малинка даром! -->
-            <!-- Пока не нужно это фоном будет <img src="img/backgraund-malina.jpg" width="560" height="229" alt="Ягода малина"> -->
             <h2>Малинка даром!</h2>
             <p class="banner">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
             <a class="button raspberries-chocolate-button" href="blank.html">Хочу варенье!</a>
           </section>
           <section class="chocolate"> <!-- Шоколадки даром! -->
-            <!-- Пока не нужно это фоном будет <img src="img/backgraund-chocolate.jpg" width="560" height="229" alt="Шоколадная стружка"> -->
             <h2>Шоколадки даром!</h2>
             <p class="banner">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
             <a class="button raspberries-chocolate-button" href="blank.html">Хочу шоколадки!</a>
@@ -153,25 +150,25 @@
             <li class="catalog-item">
               <img src="img/ice/hit-ice1.png" width="267" height="267" alt="Мороженое">
               <p>310 ₽<span>/кг</span></p>
-              <a href="blank.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a> <!--<p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p></a>-->
+              <a href="blank.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
               <a href="#" class="button">Быстрый просмотр</a>
             </li>
             <li class="catalog-item">
               <img src="img/ice/hit-ice2.png" width="267" height="267" alt="Мороженое">
               <p>380 ₽<span>/кг</span></p>
-              <a href="blank.html">Сливочно-кофейное с кусочками шоколада</a><!--<p>Сливочно-кофейное с кусочками шоколада</p></a>-->
+              <a href="blank.html">Сливочно-кофейное с кусочками шоколада</a>
               <a href="#" class="button">Быстрый просмотр</a>
             </li>
             <li class="catalog-item">
               <img src="img/ice/hit-ice3.png" width="267" height="267" alt="Мороженое">
               <p>355 ₽<span>/кг</span></p>
-              <a href="blank.html">Сливочно-клубничное с присыпкой из белого шоколада</a><!--<p>Сливочно-клубничное с присыпкой из белого шоколада</p></a>-->
+              <a href="blank.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
               <a href="#" class="button">Быстрый просмотр</a>
             </li>
             <li class="catalog-item">
               <img src="img/ice/hit-ice4.png" width="267" height="267" alt="Мороженое">
               <p>415 ₽<span>/кг</span></p>
-              <a href="blank.html">Сливочное крем-брюле с карамельной подливкой</a><!--<p>Сливочное крем-брюле с карамельной подливкой</p></a>-->
+              <a href="blank.html">Сливочное крем-брюле с карамельной подливкой</a>
               <a href="#" class="button">Быстрый просмотр</a>
             </li>
           </ul>
@@ -311,10 +308,10 @@
               Для поставщиков</a>
           </li>
           <li class="footer-suppliers">
-            <a class="footer-contacts-list-link" href="blank.html">О производстве</a>
+            <a class="footer-contacts-list-link" href="blank.html">Наши документы</a>
           </li>
           <li class="footer-suppliers">
-            <a class="footer-contacts-list-link" href="blank.html">Наши документы</a>
+            <a class="footer-contacts-list-link" href="blank.html">О производстве</a>
           </li>
           <li class="footer-suppliers">
             <a class="footer-contacts-list-link" href="blank.html">Экологические стандарты</a>
@@ -330,7 +327,6 @@
   <section class="modal modal-login">
     <div class="modal-body">
       <h3>Мы обязательно вам ответим!</h3>
-      <!--<p class="modal-description">Введите пожалуйста свой логин и пароль</p>-->
       <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
         <p class="login-form-user"> <!--Поле ФИО-->
           <label class="visually-hidden" for="login-name-form">ФИО</label>

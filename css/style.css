@@ -95,7 +95,6 @@ fieldset {
 }
 .slider-list {
   margin: 0;
-  /*padding: 0;*/
   list-style: none;
 }
 .slide {
@@ -109,15 +108,15 @@ fieldset {
   width: 700px;
   padding: 0;
   /*margin: 0 auto;*/
-  margin-left: 181px;
-  margin-bottom: 27px;
+  margin-left: 183px;
+  margin-bottom: 25px;
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
 }
 .slider-controls {
   position: absolute;
-  bottom: 25px;
+  bottom: 22px;
   left: 0;
   z-index: 4;
   display: flex;
@@ -188,7 +187,7 @@ fieldset {
 .user-navigation {
   margin: 0;
   padding: 0;
-  width: 300px;
+  width: 330px;
   outline-offset: -5px;
 }
 .information-crumbs {
@@ -319,17 +318,21 @@ fieldset {
   color: var(--basic-black-text);
 }
 .site-navigation-link-VIP {
-  padding: 13px 0px 15px 15px;
+  padding: 9px 0px 10px 16px;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
   border-bottom: 1px solid rgba(50, 50, 50, 0.2);
   margin: 0px 9px 0px 6px;
 }
+.site-navigation-link-VIP-one {
+  padding-top: 12px;
+}
 .site-navigation-link-element {
   padding: 7px 0px 7px 21px;
   font-size: 14px;
   line-height: 16px;
+  margin-top: 2px;
 }
 .site-navigation-link-element:hover {
   background-color: #FBDED7;
@@ -346,13 +349,13 @@ fieldset {
   margin-bottom: 20px;
   margin-top: 23px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   list-style: none;
   font-size: 14px;
   line-height: 16px;
 }
 .user-navigation-link {
-  background-color: var(--basic-green-lite); /*rgba(255, 255, 255, 0.2);*/
+  background-color: var(--basic-green-lite);
   border-radius: 20px;
   color: var(--basic-white);
   text-decoration: none;
@@ -378,7 +381,7 @@ fieldset {
   display: block;
 }
 .user-navigation-link-basket {
-  background-color: var(--basic-white); /*rgba(255, 255, 255, 0.2);*/
+  background-color: var(--basic-white);
   border-radius: 20px;
   color: var(--basic-black-text);
   text-decoration: none;
@@ -399,6 +402,7 @@ fieldset {
 .user-navigation-item {
   position: relative;
   font-weight: 500;
+  margin-left: 10px;
 }
 .user-navigation-popup {
   display: block;
@@ -412,7 +416,6 @@ fieldset {
   border-radius: 4px;
   right: 0;
   top: 36px;
-  /*padding: 10px;*/
 }
 .user-navigation-item:hover .user-navigation-popup {
   visibility: visible;
@@ -428,6 +431,7 @@ fieldset {
   padding-left: 15px;
   width: 292px;
   height: 40px;
+  font-family: "Roboto", Arial, sans-serif;
   margin: 10px 5px;
   border: 1px solid #D3D3D2;
   border-radius: 4px;
@@ -457,16 +461,18 @@ fieldset {
 }
 
 .user-navigation-popup-link {
-  width: 277px;
+  width: 257px;
   height: 194px;
   padding: 10px;
 }
 .popup-form-link input {
   padding-left: 15px;
-  width: 241px;
-  height: 44px;
-  font-family: 'Roboto';
-  margin: 10px 7px 10px 9px;
+  width: 222px;
+  height: 39px;
+  font-family: "Roboto", Arial, sans-serif;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-bottom: 13px;
   border: 1px solid #D3D3D2;
   border-radius: 4px;
   font-weight: 400;
@@ -492,10 +498,10 @@ fieldset {
 }
 .popup-form-link-enter {
   display: flex;
-  width: 280px;
+  width: 265px;
   height: 44px;
   align-items: center;
-  padding-top: 10px;
+  padding-top: 6px;
 }
 .popup-form-link-button {
   margin: 0px 20px 0px 19px;
@@ -503,7 +509,8 @@ fieldset {
 .popup-form-link button {
   border: none;
   box-shadow: none;
-  padding: 9px 23px;
+  padding: 9px 26px;
+  margin-left: 8px;
 }
 .popup-form-link-help {
   display: flex;
@@ -517,8 +524,8 @@ fieldset {
   color: var(--basic-black-text);
   border-bottom:1px solid var(--basic-darl-lite);
   font-weight: 400;
-  margin-bottom: 5px;
-  margin-top: 4px;
+  margin-bottom: 3px;
+  margin-top: 3px;
 }
 
 .user-navigation-popup-basket {
@@ -550,7 +557,6 @@ fieldset {
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
-  /*padding-left: 11px;*/
   border-bottom: 1px solid var(--basic-dark-lite-lite);
 }
 .user-navigation-popup-table span {
@@ -561,11 +567,14 @@ fieldset {
 }
 .td-column-2 {
   padding-left: 6px;
-  padding-right: 11px;
+  padding-right: 12px;
   height: 50px;
 }
 .td-column-3 {
   width: 216px;
+}
+.td-column-3-top {
+  padding-top: 16px;
 }
 .td-column-4 {
   padding-left: 3px;
@@ -584,7 +593,7 @@ fieldset {
   color: var(--basic-black-text);
   font-size: 15px;
   text-align: right;
-  margin-right: 12px;
+  margin-right: 14px;
   margin-top: 16px;
 }
 
@@ -605,7 +614,7 @@ fieldset {
 .catalog-list-menu:focus {
   color: var(--basic-black-text);
   background-color: #EDEDED;;
-  box-shadow: inset 0px 2px 1px #696969;/*0px -3px 0px var(--basic-dark);/*rgba(172, 16, 0, 0.64); /*тень кнопки*/
+  box-shadow: inset 0px 2px 1px #696969; /*тень кнопки*/
   padding: 8px 14px; /* Поля вокруг текста */
   border-radius: 26px;
   text-decoration: none;
@@ -630,7 +639,7 @@ fieldset {
 .button-apply:focus {
   color: var(--basic-black-text);
   background-color: var(--basic-white);
-  box-shadow: 0px -3px 0px var(--basic-dark);/*rgba(172, 16, 0, 0.64); /*тень кнопки*/
+  box-shadow: 0px -3px 0px var(--basic-dark); /*тень кнопки*/
   padding: 9px 29px; /* Поля вокруг текста */
   border-radius: 20px;
   text-decoration: none;
@@ -660,7 +669,7 @@ fieldset {
 .button /*.button*/ {
   background: linear-gradient(180deg, #F26843 0%, #E74A35 100%); /*градиентная заливка*/
   text-align: right;
-  font-family: 'Roboto';
+  font-family: "Roboto", Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -682,7 +691,7 @@ fieldset {
   font-size: 32px;
   line-height: 44px;
   padding: 9px 22px;
-  margin-left: -56px;
+  margin-left: -40px;
   letter-spacing: 2px;
 }
 .button:hover { /*цвет кнопки при наведении*/
@@ -718,7 +727,7 @@ fieldset {
   appearance: none;
   display: flex;
   color: var(--basic-white);
-  background: var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*заливка*/
+  background: var(--basic-green-lite); /*заливка*/
   border-radius: 20px; /*скругление углов*/
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 500;
@@ -779,7 +788,7 @@ fieldset {
   height: 11px;
   font-size: 14px;
   line-height: 16px;
-  font-family: 'Roboto';
+  font-family: "Roboto", Arial, sans-serif;
   border: none;
   background: none;
   color: var(--basic-white);
@@ -807,8 +816,8 @@ fieldset {
 /*----*/
 
 .button-apply { /*кнопка применить*/
-  background: var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*заливка*/
-  border: 2px solid var(--basic-white); /*#FFFFFF; /*окантовка*/
+  background: var(--basic-green-lite); /*заливка*/
+  border: 2px solid var(--basic-white); /*окантовка*/
   color: var(--basic-white);
   box-sizing: border-box;
   border-radius: 20px; /*скругление углов*/
@@ -831,7 +840,7 @@ fieldset {
 .raspberries a { /*кнопка расположение ее на блоке*/
   display: block;
   margin-left: 373px;
-  margin-right: 25px;
+  margin-right: 23px;
   margin-top: 44px;
 }
 
@@ -844,7 +853,7 @@ fieldset {
 .chocolate a { /*кнопка расположение ее на блоке*/
   display: block;
   margin-left: 347px;
-  margin-right: 24px;
+  margin-right: 23px;
   margin-top: 44px;
 }
 
@@ -880,9 +889,9 @@ fieldset {
   position: absolute;
   display: block;
   width: 293px;
-  height: calc(100% + 82px);
+  height: calc(100% + 78px);
   left: -13px;
-  top: -6px;
+  top: -8px;
   background-color: rgba(255, 255, 255, .2);
   border-radius: 4px;
   z-index: 1;
@@ -894,13 +903,13 @@ fieldset {
   content: "";
 }
 .catalog-item .button {
-  padding: 12px 10px;
+  padding: 10px 3px;
   width: 200px;
   text-align: center;
   display: none;
   position: absolute;
-  bottom: -58px;
-  left: 20px;
+  bottom: -48px;
+  left: 30px;
 }
 .catalog-item:hover .button {
   display: block;
@@ -913,7 +922,7 @@ fieldset {
   padding: 0;
   margin: 0;
   margin-top: -65px;
-  margin-bottom: 26px;
+  margin-bottom: 25px;
   font-size: 45px;
   line-height: 45px;
   text-align: left;
@@ -927,7 +936,7 @@ fieldset {
   margin-top: 13px;
   font-weight: 500; /*полужирный текст - параметр*/
   text-decoration: none; /*убираем подчеркивание у ссылок*/
-  border-bottom:1px solid var(--basic-green-lite); /*rgba(255, 255, 255, 0.2); /*цвет подчеркивания*/
+  border-bottom:1px solid var(--basic-green-lite); /*цвет подчеркивания*/
   position: relative;
   z-index: 2;
 }
@@ -1041,7 +1050,7 @@ fieldset {
   border-width: 1px;
   border-style: double;
   padding-left: 14px;
-  font-family: 'Roboto';
+  font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -1153,7 +1162,7 @@ fieldset {
   top: -4px;
   width: 15px;
   height: 15px;
-  border: 4px solid rgba(255, 255, 255, 0.8); /*var(--basic-white);*/
+  border: 4px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
 }
 .filter-input-radio + label:hover::before {
@@ -1166,7 +1175,7 @@ fieldset {
   top: 3px;
   width: 9px;
   height: 9px;
-  background-color: rgba(255, 255, 255, 0.8); /*var(--basic-white);*/
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
 }
 .filter-input-radio:checked + label:hover::after {
@@ -1244,14 +1253,8 @@ fieldset {
   position: absolute;
   top: 63px;
   right: 30px;
-  /*position: relative;
-  top: -400px;
-  left: 870px;*/
-  /* bottom: 65px; */
-  /*right: 27px;*/
   background-color: #FEFEFE;
   width: 276px;
-  /*padding: 31px 25px;*/
   padding-top: 27px;
   padding-left: 23px;
   padding-bottom: 29px;
@@ -1317,7 +1320,7 @@ fieldset {
     padding: 0;
     width: 251px;
     height: 42px;
-    font-family: 'Roboto';
+    font-family: "Roboto", Arial, sans-serif;
     border-radius: 4px;
     border-width: 1px;
     border-style: double;
@@ -1329,7 +1332,7 @@ fieldset {
     border-color: rgba(178, 178, 178, 0.52);
 }
 .modal {
-  /*display: none; /*скроем модальное окно отправки*/
+  display: none; /*скроем модальное окно отправки*/
   position: fixed;
   top: 0;
   right: 0;
@@ -1337,30 +1340,25 @@ fieldset {
   left: 0;
   background-color: rgba(0, 0, 0, .35);
 
-  display: flex;
+  /*display: flex;
 
   /*align-items: center;*/
   justify-content: center;
   z-index: 5;
 }
 .modal-body {
-  /*display: none; /*скроем модальное окно отправки*/
+  display: none; /*скроем модальное окно отправки*/
 
   /*position: absolute;*/
   position: fixed;
-  /*top: 338px;*/
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-
-  /*position: relative;*/
   bottom: auto;
   width: 428px;
   padding: 20px 25px 27px;
   background: #F8F7F4;
   border-radius: 6px;
-  /* left: 50%;
-  margin-left: -214px; */
 }
 .area-p {
   margin-bottom: 25px;
@@ -1441,6 +1439,12 @@ fieldset {
   width: 194px;
   height: 26px;
   margin-bottom: 36px;
+}
+.number-list-number-left {
+  margin-right: 14px;
+}
+.number-list-number-right {
+  margin-left: 14px;
 }
 .number-list-number {
   text-decoration: none; /*убираем подчеркивание у ссылок*/
